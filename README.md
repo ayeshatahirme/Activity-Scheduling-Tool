@@ -1,2 +1,2 @@
 # Activity-Scheduling-Tool
-Automatic timetable generator tool.
+Automatic timetable generator tool 
