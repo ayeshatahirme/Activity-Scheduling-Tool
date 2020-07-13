@@ -567,17 +567,11 @@ SET @OneByOneNonPracticalSubject = @OneByOneNonPracticalSubject + 1;
 
                                 SET @Message = 'All Non Practical Time Table Details Intilize';
 
- 
-
-               
 
                 DELETE FROM TimeTableDetailsTable;
 
                 DELETE FROM TimeTblTable;
 
-               
-
- 
 
                 INSERT INTO TimeTblTable(TimeTableID , SessionID, SessionTitle, ProgramSemesterID , TimeTableTitle , SemesterTitle , StartDate , EndDate , IsActive )
 
@@ -588,7 +582,6 @@ INSERT INTO TimeTableDetailsTable(TimeTableID, SessionID, SessionTitle, ProgramS
                 SELECT TimeTableID, SessionID, SessionTitle, ProgramSemesterSubjectID, SubjectTitle, RoomID, LabID, DayTimeSlotID, LectureID, DayID, IsActive FROM @TimeTableDetails
 
                 SET @Message = 'Time Table Created Successfully';
-
 
 
 END
