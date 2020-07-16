@@ -1,5 +1,3 @@
-﻿
-
 
 CREATE PROC[dbo].[GenerateTimeTablesForAllSession] (@StartDate Date, @EndDate Date, @Message nvarchar(100) output)
 
@@ -9,14 +7,11 @@ BEGIN
 
 //-------------------- Here we are using Genetic Algorithem  ---------------------------------
 
-
-
 //-- Get All Sujects -- All Subject here Chromosomes, and one subject is Gen
 
 DECLARE @ALLSubjectSemesterTable Table(RowNo int, RepeatedRowNo int, ProgramSemesterID int, CrHrs int, ProgramSemesterSubjectID int, SSTitle nvarchar(300),Title nvarchar(200),RoomTypeID int,LectureID int,SessionID int, SessionTitle NVARCHAR(200))
 
 DECLARE @SubjectSemesterTable Table(RowNo int, ProgramSemesterID int, CrHrs int, ProgramSemesterSubjectID int, SSTitle nvarchar(300),Title nvarchar(200),RoomTypeID int,LectureID int,SessionID int, SessionTitle NVARCHAR(200))
-
  
 
 //-- Get All Practical Class
@@ -24,7 +19,6 @@ DECLARE @SubjectSemesterTable Table(RowNo int, ProgramSemesterID int, CrHrs int,
 DECLARE @PracticalSubjectTable Table(ProgramSemesterID int, CrHrs int, ProgramSemesterSubjectID int, SSTitle nvarchar(300),Title nvarchar(200),RoomTypeID int,LectureID int,SessionID int, SessionTitle NVARCHAR(200))
 
 DECLARE @PracticalRandomSubjectTable Table(RowNo int, ProgramSemesterID int, CrHrs int, ProgramSemesterSubjectID int, SSTitle nvarchar(300),Title nvarchar(200),RoomTypeID int,LectureID int,SessionID int, SessionTitle NVARCHAR(200))
-
  
 
 //-- Get All Non Practical Class
@@ -34,17 +28,14 @@ DECLARE @NonPracticalSubjectTable Table(ProgramSemesterID int, CrHrs int, Progra
 DECLARE @NonPracticalRandomSubjectTable Table(RowNo int, ProgramSemesterID int, CrHrs int, ProgramSemesterSubjectID int, SSTitle nvarchar(300),Title nvarchar(200),RoomTypeID int,LectureID int,SessionID int, SessionTitle NVARCHAR(200))
 
  
-
 //-- Get All Avalibale Slots -- Room and Lab Population
 
 DECLARE @ALLRoomsSlots Table(RowNo int, DayTimeSlotID int, SlotTitle nvarchar(200),StartTime Time, EndTime Time,DayID int,DayTitle nvarchar(100),RoomID int,RoomNo nvarchar(200),Capacity int)
 
 DECLARE @ALLLabsSlots Table(RowNo int, DayTimeSlotID int, SlotTitle nvarchar(200),StartTime Time, EndTime Time,DayID int,DayTitle nvarchar(100),LabID int,LabNo nvarchar(200),Capacity int)
-
  
 
 Insert into @SubjectSemesterTable(RowNo, ProgramSemesterID, CrHrs, ProgramSemesterSubjectID, SSTitle, Title, RoomTypeID, LectureID, SessionID, SessionTitle) select Row_Number() over(Order By(SELECT 1)) as RowNo, ProgramSemesterID,CrHrs,ProgramSemesterSubjectID,SSTitle,Title,RoomTypeID,LectureID,SessionID,SessionTitle From v_AllSemesterSectionSubjects Order By NewID();
-
 
 
 DECLARE @IndexNo int = 1;
@@ -56,15 +47,11 @@ DECLARE @CountRecord int = (Select Count(*) From @SubjectSemesterTable);
                 WHILE @IndexNo <= @CountRecord
 
                                 BEGIN
-
                                                 DECLARE @RepeatPrint AS INT = (SELECT CrHrs From @SubjectSemesterTable where RowNo = @IndexNo);
-
                                                 DECLARE @CountCrHrs int = 1;
 
-                                                                WHILE @CountCrHrs <=@RepeatPrint
-
-                                                                                BEGIN
-
+                                                               WHILE @CountCrHrs <=@RepeatPrint
+                                                                               BEGIN
                                                                                                 Insert into @ALLSubjectSemesterTable(RowNo, RepeatedRowNo, ProgramSemesterID, CrHrs, ProgramSemesterSubjectID, SSTitle, Title, RoomTypeID, LectureID, SessionID, SessionTitle) select @RowNo, RowNo, ProgramSemesterID, CrHrs, ProgramSemesterSubjectID, SSTitle, Title, RoomTypeID, LectureID, SessionID, SessionTitle From @SubjectSemesterTable WHERE RowNo = @IndexNo;
 
 SET @CountCrHrs = @CountCrHrs + 1;
@@ -580,17 +567,11 @@ SET @OneByOneNonPracticalSubject = @OneByOneNonPracticalSubject + 1;
 
                                 SET @Message = 'All Non Practical Time Table Details Intilize';
 
- 
-
-               
 
                 DELETE FROM TimeTableDetailsTable;
 
                 DELETE FROM TimeTblTable;
 
-               
-
- 
 
                 INSERT INTO TimeTblTable(TimeTableID , SessionID, SessionTitle, ProgramSemesterID , TimeTableTitle , SemesterTitle , StartDate , EndDate , IsActive )
 
@@ -601,7 +582,6 @@ INSERT INTO TimeTableDetailsTable(TimeTableID, SessionID, SessionTitle, ProgramS
                 SELECT TimeTableID, SessionID, SessionTitle, ProgramSemesterSubjectID, SubjectTitle, RoomID, LabID, DayTimeSlotID, LectureID, DayID, IsActive FROM @TimeTableDetails
 
                 SET @Message = 'Time Table Created Successfully';
-
 
 
 END
