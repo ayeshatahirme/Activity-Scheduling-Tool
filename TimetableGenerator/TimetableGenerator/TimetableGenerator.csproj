@@ -46,6 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addData.Designer.cs">
+      <DependentUpon>addData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoTimeTableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoTimeTableDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +83,15 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="subjectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subjectData.Designer.cs">
+      <DependentUpon>subjectData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addData.resx">
+      <DependentUpon>addData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +113,20 @@
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="subjectData.resx">
+      <DependentUpon>subjectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AutoTimeTableDataSet.xsc">
+      <DependentUpon>AutoTimeTableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AutoTimeTableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AutoTimeTableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AutoTimeTableDataSet.xss">
+      <DependentUpon>AutoTimeTableDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
