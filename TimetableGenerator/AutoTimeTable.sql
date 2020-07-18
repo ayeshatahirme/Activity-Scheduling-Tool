@@ -79,15 +79,74 @@ USID8 VARCHAR(25) FOREIGN KEY REFERENCES COURSE(ID)
 );
 
 
+SELECT TOP 100 [SUBJ1]
+      ,[CRDHRS1]
+      ,[TEACHER1]
+      ,[SUBTYPE1]
+      ,[S_ID1]
+      ,[USID1]
+  FROM [AutoTimeTable].[dbo].[SUBJECT1]
+  
+  /* ----------------------- 2 ------------------------- */
+SELECT TOP 100 [SUBJ2]
+      ,[CRDHRS2]
+      ,[TEACHER2]
+      ,[SUBTYPE2]
+      ,[S_ID2]
+      ,[USID2]
+  FROM [AutoTimeTable].[dbo].[SUBJECT2]
+  
+  /* ----------------------- 3 ------------------------- */
+SELECT TOP 100 [SUBJ3]
+      ,[CRDHRS3]
+      ,[TEACHER3]
+      ,[SUBTYPE3]
+      ,[S_ID3]
+      ,[USID3]
+  FROM [AutoTimeTable].[dbo].[SUBJECT3]
 
-
-SELECT * FROM SUBJECT1
-SELECT * FROM SUBJECT2
-SELECT * FROM SUBJECT3
-SELECT * FROM SUBJECT4
-SELECT * FROM SUBJECT5
-SELECT * FROM SUBJECT6
-SELECT * FROM SUBJECT7
-SELECT * FROM SUBJECT8
-
-
+  /* ----------------------- 4 ------------------------- */  
+SELECT TOP 100 [SUBJ4]
+      ,[CRDHRS4]
+      ,[TEACHER4]
+      ,[SUBTYPE4]
+      ,[S_ID4]
+      ,[USID4]
+  FROM [AutoTimeTable].[dbo].[SUBJECT4]
+  
+  /* ----------------------- 5 ------------------------- */
+SELECT TOP 100 [SUBJ5]
+      ,[CRDHRS5]
+      ,[TEACHER5]
+      ,[SUBTYPE5]
+      ,[S_ID5]
+      ,[USID5]
+  FROM [AutoTimeTable].[dbo].[SUBJECT5]
+  
+  /* ----------------------- 6 ------------------------- */
+SELECT TOP 100 [SUBJ6]
+      ,[CRDHRS6]
+      ,[TEACHER6]
+      ,[SUBTYPE6]
+      ,[S_ID6]
+      ,[USID6]
+  FROM [AutoTimeTable].[dbo].[SUBJECT6]
+  
+  /* ----------------------- 7 ------------------------- */
+SELECT TOP 100 [SUBJ7]
+      ,[CRDHRS7]
+      ,[TEACHER7]
+      ,[SUBTYPE7]
+      ,[S_ID7]
+      ,[USID7]
+  FROM [AutoTimeTable].[dbo].[SUBJECT7]
+  
+  /* ----------------------- 8 ------------------------- */
+SELECT TOP 100 [SUBJ8]
+      ,[CRDHRS8]
+      ,[TEACHER8]
+      ,[SUBTYPE8]
+      ,[S_ID8]
+      ,[USID8]
+  FROM [AutoTimeTable].[dbo].[SUBJECT8]
+  

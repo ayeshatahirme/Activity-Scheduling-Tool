@@ -63,6 +63,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="generator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generator.Designer.cs">
+      <DependentUpon>generator.cs</DependentUpon>
+    </Compile>
     <Compile Include="inputData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generator.resx">
+      <DependentUpon>generator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inputData.resx">
       <DependentUpon>inputData.cs</DependentUpon>

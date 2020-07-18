@@ -103,11 +103,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(247, 112);
+            this.label3.Location = new System.Drawing.Point(237, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 16);
+            this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 37;
-            this.label3.Text = "Credit Hours:";
+            this.label3.Text = "Contact Hours:";
             // 
             // crd1
             // 
@@ -188,11 +188,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(247, 147);
+            this.label4.Location = new System.Drawing.Point(237, 147);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.Size = new System.Drawing.Size(95, 16);
             this.label4.TabIndex = 46;
-            this.label4.Text = "Credit Hours:";
+            this.label4.Text = "Contact Hours:";
             // 
             // crd2
             // 
@@ -240,11 +240,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(247, 180);
+            this.label8.Location = new System.Drawing.Point(237, 180);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.Size = new System.Drawing.Size(95, 16);
             this.label8.TabIndex = 54;
-            this.label8.Text = "Credit Hours:";
+            this.label8.Text = "Contact Hours:";
             // 
             // crd3
             // 
@@ -292,11 +292,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(246, 214);
+            this.label11.Location = new System.Drawing.Point(236, 214);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 16);
+            this.label11.Size = new System.Drawing.Size(95, 16);
             this.label11.TabIndex = 62;
-            this.label11.Text = "Credit Hours:";
+            this.label11.Text = "Contact Hours:";
             // 
             // crd4
             // 
@@ -343,11 +343,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(246, 248);
+            this.label14.Location = new System.Drawing.Point(236, 248);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 16);
+            this.label14.Size = new System.Drawing.Size(95, 16);
             this.label14.TabIndex = 70;
-            this.label14.Text = "Credit Hours:";
+            this.label14.Text = "Contact Hours:";
             // 
             // crd5
             // 
@@ -394,11 +394,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(246, 281);
+            this.label17.Location = new System.Drawing.Point(236, 281);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 16);
+            this.label17.Size = new System.Drawing.Size(95, 16);
             this.label17.TabIndex = 78;
-            this.label17.Text = "Credit Hours:";
+            this.label17.Text = "Contact Hours:";
             // 
             // crd6
             // 
@@ -445,11 +445,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(246, 315);
+            this.label20.Location = new System.Drawing.Point(236, 315);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 16);
+            this.label20.Size = new System.Drawing.Size(95, 16);
             this.label20.TabIndex = 86;
-            this.label20.Text = "Credit Hours:";
+            this.label20.Text = "Contact Hours:";
             // 
             // crd7
             // 
@@ -496,11 +496,11 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(246, 350);
+            this.label23.Location = new System.Drawing.Point(236, 350);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(84, 16);
+            this.label23.Size = new System.Drawing.Size(95, 16);
             this.label23.TabIndex = 94;
-            this.label23.Text = "Credit Hours:";
+            this.label23.Text = "Contact Hours:";
             // 
             // crd8
             // 
