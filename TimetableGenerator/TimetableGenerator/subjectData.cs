@@ -50,8 +50,12 @@ namespace TimetableGenerator
 
             // --------------------- TIMETABLE ------------------------
 
-            string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @l5, @l6, @l7)";
+            string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, TBREAK LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @tbreak, @l5, @l6, @l7)";
             SqlCommand ls1 = new SqlCommand(s1, con);
+            string var = "BREAK";
+
+            // ls1.Parameters.AddWithValue("@tbreak", var);
+
             if (th1.Text=="Lab")
             {
                 ls1.Parameters.AddWithValue("@l1", sub1.Text);
