@@ -78,9 +78,7 @@ TBREAK VARCHAR(50),
 LEC5 VARCHAR(50),
 LEC6 VARCHAR(50),
 );
-
-
-  
+ 
   /* ----------------------- 1 ------------------------- */
 
 SELECT TOP 100 [SUBJ1]

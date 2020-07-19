@@ -48,7 +48,7 @@ namespace TimetableGenerator
             */
 
             // ---------------------------- timetable ---------------------------------
-
+            
             string dataValue = userID.Text;
             string q = "SELECT LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7 FROM TIMETABLE WHERE T_ID = " + dataValue;
             SqlDataAdapter sqlDa_timetable = new SqlDataAdapter(q, connectionString);
