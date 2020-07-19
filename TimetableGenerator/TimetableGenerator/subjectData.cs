@@ -131,7 +131,7 @@ namespace TimetableGenerator
                 {
                     ls1.Parameters.AddWithValue("@tbreak", var);
                     ls1.Parameters.AddWithValue("@l5", sub2.Text);
-                    ls1.Parameters.AddWithValue("@l6", nill);
+                    ls1.Parameters.AddWithValue("@l6", sub2.Text);
                     ls1.Parameters.AddWithValue("@l7", nill);
                 }
                 else if (crd1.Text == "3")
@@ -139,7 +139,7 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@tbreak", var);
                     ls1.Parameters.AddWithValue("@l5", sub2.Text);
                     ls1.Parameters.AddWithValue("@l6", sub2.Text);
-                    ls1.Parameters.AddWithValue("@l7", nill);
+                    ls1.Parameters.AddWithValue("@l7", sub2.Text);
                 }
                 ls1.ExecuteNonQuery();
             }
@@ -200,7 +200,6 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l3", sub3.Text);
                     ls1.Parameters.AddWithValue("@l4", nill);
                 }
-                //        ls1.ExecuteNonQuery();
             }
 
             //------------------------------------   4   ------------------------------
@@ -217,11 +216,48 @@ namespace TimetableGenerator
             cmd4.Parameters.AddWithValue("@type", th4.Text);
             cmd4.Parameters.AddWithValue("@usid", userID.Text);
             cmd4.ExecuteNonQuery();
-//            con.Close();
+            //            con.Close();
+
+
+            // --------------------- TIMETABLE ------------------------
+
+            if (th4.Text == "Lab" || th4.Text == "lab" || th4.Text == "l")
+            {
+                //ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@tbreak", var);
+                ls1.Parameters.AddWithValue("@l5", sub4.Text);
+                ls1.Parameters.AddWithValue("@l6", sub4.Text);
+                ls1.Parameters.AddWithValue("@l7", sub4.Text);
+            }
+            else if (th4.Text == "Theory" || th4.Text == "theory" || th4.Text == "th")
+            {
+                if (crd4.Text == "1")
+                {
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", sub4.Text);
+                    ls1.Parameters.AddWithValue("@l6", nill);
+                    ls1.Parameters.AddWithValue("@l7", nill);
+                }
+                else if (crd1.Text == "2")
+                {
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", sub4.Text);
+                    ls1.Parameters.AddWithValue("@l6", sub4.Text);
+                    ls1.Parameters.AddWithValue("@l7", nill);
+                }
+                else if (crd1.Text == "3")
+                {
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", sub4.Text);
+                    ls1.Parameters.AddWithValue("@l6", sub4.Text);
+                    ls1.Parameters.AddWithValue("@l7", sub4.Text);
+                }
+                ls1.ExecuteNonQuery();
+            }
 
             //------------------------------------   5   ------------------------------
 
-          //  con.Open();
+            //  con.Open();
             string query5 = "INSERT INTO SUBJECT5(SUBJ5, CHRS5, TEACHER5, SUBTYPE5, S_ID5)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
