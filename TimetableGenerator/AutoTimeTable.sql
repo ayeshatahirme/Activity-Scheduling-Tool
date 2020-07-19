@@ -91,12 +91,14 @@ USID VARCHAR(25) FOREIGN KEY REFERENCES COURSE(ID)
 SELECT TOP 1000 [W_D]
   FROM [AutoTimeTable].[dbo].[WEEKDAYS]
 
+  
+  /* ----------------------- 1 ------------------------- */
+
 SELECT TOP 100 [SUBJ1]
       ,[CHRS1]
       ,[TEACHER1]
       ,[SUBTYPE1]
       ,[S_ID1]
-      ,[USID1]
   FROM [AutoTimeTable].[dbo].[SUBJECT1]
   
   /* ----------------------- 2 ------------------------- */
@@ -105,7 +107,6 @@ SELECT TOP 100 [SUBJ2]
       ,[TEACHER2]
       ,[SUBTYPE2]
       ,[S_ID2]
-      ,[USID2]
   FROM [AutoTimeTable].[dbo].[SUBJECT2]
   
   /* ----------------------- 3 ------------------------- */
@@ -114,7 +115,6 @@ SELECT TOP 100 [SUBJ3]
       ,[TEACHER3]
       ,[SUBTYPE3]
       ,[S_ID3]
-      ,[USID3]
   FROM [AutoTimeTable].[dbo].[SUBJECT3]
 
   /* ----------------------- 4 ------------------------- */  
@@ -123,7 +123,6 @@ SELECT TOP 100 [SUBJ4]
       ,[TEACHER4]
       ,[SUBTYPE4]
       ,[S_ID4]
-      ,[USID4]
   FROM [AutoTimeTable].[dbo].[SUBJECT4]
   
   /* ----------------------- 5 ------------------------- */
@@ -132,7 +131,6 @@ SELECT TOP 100 [SUBJ5]
       ,[TEACHER5]
       ,[SUBTYPE5]
       ,[S_ID5]
-      ,[USID5]
   FROM [AutoTimeTable].[dbo].[SUBJECT5]
   
   /* ----------------------- 6 ------------------------- */
@@ -141,7 +139,6 @@ SELECT TOP 100 [SUBJ6]
       ,[TEACHER6]
       ,[SUBTYPE6]
       ,[S_ID6]
-      ,[USID6]
   FROM [AutoTimeTable].[dbo].[SUBJECT6]
   
   /* ----------------------- 7 ------------------------- */
@@ -159,7 +156,6 @@ SELECT TOP 100 [SUBJ8]
       ,[TEACHER8]
       ,[SUBTYPE8]
       ,[S_ID8]
-      ,[USID8]
   FROM [AutoTimeTable].[dbo].[SUBJECT8]
   
   /* ----------- Script for SelectTopNRows command from SSMS ------------- */
