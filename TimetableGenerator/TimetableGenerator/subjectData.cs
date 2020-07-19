@@ -42,42 +42,51 @@ namespace TimetableGenerator
             cmd1.ExecuteNonQuery();
 
             // --------------- Storing primar key value ---------------
+
             string storeID = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
             SqlCommand cmd2 = new SqlCommand(storeID, con);
             cmd2.Parameters.AddWithValue("@t_id", userID.Text);
+            cmd2.ExecuteNonQuery();
 
+            // --------------------- TIMETABLE ------------------------
+
+            string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @l5, @l6, @l7)";
+            SqlCommand ls1 = new SqlCommand(s1, con);
             if (th1.Text=="Lab")
-            {
-                string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3) VALUES(@l1, @l2, @l3)";
-                SqlCommand ls1 = new SqlCommand(s1, con);
+            {                
                 cmd1.Parameters.AddWithValue("@l1", sub1.Text);
                 cmd1.Parameters.AddWithValue("@l2", sub1.Text);
                 cmd1.Parameters.AddWithValue("@l3", sub1.Text);
             }
             else if(th1.Text=="lab")
             {
-                string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3) VALUES(@l1, @l2, @l3)";
-                SqlCommand ls1 = new SqlCommand(s1, con);
-                cmd1.Parameters.AddWithValue("@l1", sub1.Text);
-                cmd1.Parameters.AddWithValue("@l2", sub1.Text);
-                cmd1.Parameters.AddWithValue("@l3", sub1.Text);
+                ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                ls1.Parameters.AddWithValue("@l3", sub1.Text);
+              //  ls1.ExecuteNonQuery();
             }
             else if(th1.Text=="Theory")
             {
                 if(crd1.Text=="1")
                 {
-                    string st1 = "INSERT INTO TIMETABLE(LEC4) VALUES(@l4)";
-                    SqlCommand lst1 = new SqlCommand(st1, con);
-                    cmd1.Parameters.AddWithValue("@l4", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+               //     ls1.ExecuteNonQuery();
                 }
                 else if(crd1.Text=="2")
                 {
-                    string st1 = "INSERT INTO TIMETABLE(LEC4) VALUES(@l4)";
-                    string sst1 = "INSERT INTO IMETABLE(LEC1) VALUES(@l1)";
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    
 
-                    SqlCommand lst1 = new SqlCommand(st1, con);
-                    cmd1.Parameters.AddWithValue("@l4", sub1.Text);
                 }
+                else if(crd1.Text=="3")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                  //  lst1.ExecuteNonQuery();
+                }
+                ls1.ExecuteNonQuery();
             }
             con.Close();
             

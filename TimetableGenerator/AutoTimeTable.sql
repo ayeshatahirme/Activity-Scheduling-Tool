@@ -177,7 +177,7 @@ SELECT TOP 1000 [ID]
   FROM [AutoTimeTable].[dbo].[COURSE]
 
   /* ---------- Script for SelectTopNRows command from SSMS  ------------ */
-SELECT TOP 1000 [T_ID]
+SELECT TOP 100 [T_ID]
       ,[LEC1]
       ,[LEC2]
       ,[LEC3]
