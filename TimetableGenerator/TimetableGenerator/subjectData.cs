@@ -43,10 +43,10 @@ namespace TimetableGenerator
 
             // --------------- Storing primary key value ---------------
 
-            string storeID = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd_id = new SqlCommand(storeID, con);
-            cmd_id.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd_id.ExecuteNonQuery();
+            string storeID1 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
+            SqlCommand cmd_id1 = new SqlCommand(storeID1, con);
+            cmd_id1.Parameters.AddWithValue("@t_id", userID.Text);
+            cmd_id1.ExecuteNonQuery();
 
             // --------------------- TIMETABLE ------------------------
 
@@ -89,11 +89,12 @@ namespace TimetableGenerator
                 }
         //        ls1.ExecuteNonQuery();
             }
-         //   con.Close();
-            
+            //   con.Close();
+
             //------------------------------------   2   ------------------------------
 
-           // con.Open();
+            
+            // con.Open();
             string query2 = "INSERT INTO SUBJECT2(SUBJ2, CHRS2, TEACHER2, SUBTYPE2, S_ID2)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -140,10 +141,9 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l6", sub2.Text);
                     ls1.Parameters.AddWithValue("@l7", nill);
                 }
-
-                
-                //        ls1.ExecuteNonQuery();
+                ls1.ExecuteNonQuery();
             }
+
             //------------------------------------   3   ------------------------------
 
             // con.Open();
@@ -158,11 +158,54 @@ namespace TimetableGenerator
             cmd3.Parameters.AddWithValue("@type", th3.Text);
             cmd3.Parameters.AddWithValue("@usid", userID.Text);
             cmd3.ExecuteNonQuery();
-          //  con.Close();
+            //  con.Close();
+
+            // --------------- Storing primary key value ---------------
+
+            string storeID2 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
+            SqlCommand cmd_id2 = new SqlCommand(storeID2, con);
+            cmd_id2.Parameters.AddWithValue("@t_id", userID.Text);
+            cmd_id2.ExecuteNonQuery();
+
+            // --------------------- TIMETABLE ------------------------
+
+            
+            if (th3.Text == "Lab" || th3.Text == "lab" || th3.Text == "l")
+            {
+                ls1.Parameters.AddWithValue("@l1", sub3.Text);
+                ls1.Parameters.AddWithValue("@l2", sub3.Text);
+                ls1.Parameters.AddWithValue("@l3", sub3.Text);
+                ls1.Parameters.AddWithValue("@l4", nill);
+            }
+            else if (th3.Text == "Theory" || th3.Text == "theory" || th3.Text == "th")
+            {
+                if (crd3.Text == "1")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l2", nill);
+                    ls1.Parameters.AddWithValue("@l3", nill);
+                    ls1.Parameters.AddWithValue("@l4", nill);
+                }
+                else if (crd3.Text == "2")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l3", nill);
+                    ls1.Parameters.AddWithValue("@l4", nill);
+                }
+                else if (crd3.Text == "3")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l3", sub3.Text);
+                    ls1.Parameters.AddWithValue("@l4", nill);
+                }
+                //        ls1.ExecuteNonQuery();
+            }
 
             //------------------------------------   4   ------------------------------
 
-      //      con.Open();
+            //      con.Open();
             string query4 = "INSERT INTO SUBJECT4(SUBJ4, CHRS4, TEACHER4, SUBTYPE4, S_ID4)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
