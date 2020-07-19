@@ -50,7 +50,6 @@ namespace TimetableGenerator
             string var = "BREAK";
             string nill = "-";
             
-            // ls1.Parameters.AddWithValue("@tbreak", var);
 
             if (th1.Text == "Lab" || th1.Text == "lab" || th1.Text == "l")
             {
@@ -58,7 +57,7 @@ namespace TimetableGenerator
                 ls1.Parameters.AddWithValue("@l1", sub1.Text);
                 ls1.Parameters.AddWithValue("@l2", sub1.Text);
                 ls1.Parameters.AddWithValue("@l3", sub1.Text);
-  //              ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@l4", nill);
             }
             else if(th1.Text=="Theory" || th1.Text == "theory" || th1.Text == "th")
             {
@@ -68,7 +67,6 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", nill);
                     ls1.Parameters.AddWithValue("@l3", nill);
-    //                ls1.Parameters.AddWithValue("@l4", nill);
                 }
                 else if(crd1.Text=="2")
                 {
@@ -76,7 +74,6 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
                     ls1.Parameters.AddWithValue("@l3", nill);
-      //              ls1.Parameters.AddWithValue("@l4", nill);
                 }
                 else if(crd1.Text=="3")
                 {
@@ -84,9 +81,7 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
                     ls1.Parameters.AddWithValue("@l3", sub1.Text);
-        //            ls1.Parameters.AddWithValue("@l4", nill);
                 }
-        //        ls1.ExecuteNonQuery();
             }
             else
             {
@@ -94,14 +89,10 @@ namespace TimetableGenerator
                 ls1.Parameters.AddWithValue("@l1", nill);
                 ls1.Parameters.AddWithValue("@l2", nill);
                 ls1.Parameters.AddWithValue("@l3", nill);
-          //      ls1.Parameters.AddWithValue("@l4", nill);
             }
-            //   con.Close();
 
             //------------------------------------   2   ------------------------------
 
-            
-            // con.Open();
             string query2 = "INSERT INTO SUBJECT2(SUBJ2, CHRS2, TEACHER2, SUBTYPE2, S_ID2)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -416,14 +407,11 @@ namespace TimetableGenerator
             cmd6.Parameters.AddWithValue("@type", th6.Text);
             cmd6.Parameters.AddWithValue("@usid", userID.Text);
             cmd6.ExecuteNonQuery();
-            //       con.Close();
-
-
+            
             // --------------------- TIMETABLE ------------------------
 
             if (th6.Text == "Lab" || th6.Text == "lab" || th6.Text == "l")
             {
-                //ls1.Parameters.AddWithValue("@l4", nill);
                 ls3.Parameters.AddWithValue("@tbreak_3", var);
                 ls3.Parameters.AddWithValue("@l5_3", sub6.Text);
                 ls3.Parameters.AddWithValue("@l6_3", sub6.Text);

@@ -72,5 +72,12 @@ namespace TimetableGenerator
                 Password_textBox.UseSystemPasswordChar = true;
             }
         }
+
+        private void SignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            signup ss1 = new signup();
+            ss1.Show();
+        }
     }
 }

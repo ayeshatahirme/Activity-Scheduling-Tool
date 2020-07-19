@@ -35,16 +35,17 @@
             this.ShowPassword = new System.Windows.Forms.CheckBox();
             this.L_Name = new System.Windows.Forms.TextBox();
             this.F_Name = new System.Windows.Forms.TextBox();
-            this.C_Password = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.UserID = new System.Windows.Forms.TextBox();
+            this.warning = new System.Windows.Forms.Label();
+            this.pas = new System.Windows.Forms.TextBox();
+            this.cpass = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -83,7 +84,7 @@
             // 
             this.ShowConfirm.AutoSize = true;
             this.ShowConfirm.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowConfirm.Location = new System.Drawing.Point(588, 286);
+            this.ShowConfirm.Location = new System.Drawing.Point(588, 295);
             this.ShowConfirm.Name = "ShowConfirm";
             this.ShowConfirm.Size = new System.Drawing.Size(108, 18);
             this.ShowConfirm.TabIndex = 39;
@@ -95,7 +96,7 @@
             // 
             this.ShowPassword.AutoSize = true;
             this.ShowPassword.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPassword.Location = new System.Drawing.Point(235, 285);
+            this.ShowPassword.Location = new System.Drawing.Point(235, 294);
             this.ShowPassword.Name = "ShowPassword";
             this.ShowPassword.Size = new System.Drawing.Size(108, 18);
             this.ShowPassword.TabIndex = 38;
@@ -105,33 +106,23 @@
             // 
             // L_Name
             // 
-            this.L_Name.Location = new System.Drawing.Point(558, 106);
+            this.L_Name.Location = new System.Drawing.Point(558, 115);
             this.L_Name.Name = "L_Name";
             this.L_Name.Size = new System.Drawing.Size(138, 20);
             this.L_Name.TabIndex = 37;
             // 
             // F_Name
             // 
-            this.F_Name.Location = new System.Drawing.Point(205, 106);
+            this.F_Name.Location = new System.Drawing.Point(205, 115);
             this.F_Name.Name = "F_Name";
             this.F_Name.Size = new System.Drawing.Size(138, 20);
             this.F_Name.TabIndex = 36;
-            // 
-            // C_Password
-            // 
-            this.C_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C_Password.Location = new System.Drawing.Point(558, 245);
-            this.C_Password.Multiline = true;
-            this.C_Password.Name = "C_Password";
-            this.C_Password.Size = new System.Drawing.Size(138, 20);
-            this.C_Password.TabIndex = 35;
-            this.C_Password.UseSystemPasswordChar = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(406, 245);
+            this.label7.Location = new System.Drawing.Point(406, 254);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 17);
             this.label7.TabIndex = 34;
@@ -141,7 +132,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(453, 106);
+            this.label6.Location = new System.Drawing.Point(453, 115);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 33;
@@ -151,36 +142,25 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 109);
+            this.label4.Location = new System.Drawing.Point(100, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 32;
             this.label4.Text = "First Name:";
             // 
-            // Password
-            // 
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(205, 245);
-            this.Password.Multiline = true;
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(138, 20);
-            this.Password.TabIndex = 31;
-            this.Password.UseSystemPasswordChar = true;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
-            // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(558, 170);
+            this.Email.Location = new System.Drawing.Point(558, 179);
             this.Email.Multiline = true;
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(138, 37);
+            this.Email.Size = new System.Drawing.Size(138, 45);
             this.Email.TabIndex = 30;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 245);
+            this.label3.Location = new System.Drawing.Point(100, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 29;
@@ -190,7 +170,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(430, 180);
+            this.label2.Location = new System.Drawing.Point(430, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 17);
             this.label2.TabIndex = 28;
@@ -200,7 +180,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 180);
+            this.label1.Location = new System.Drawing.Point(121, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 27;
@@ -208,11 +188,47 @@
             // 
             // UserID
             // 
-            this.UserID.Location = new System.Drawing.Point(205, 177);
+            this.UserID.Location = new System.Drawing.Point(205, 186);
             this.UserID.Multiline = true;
             this.UserID.Name = "UserID";
             this.UserID.Size = new System.Drawing.Size(138, 20);
             this.UserID.TabIndex = 26;
+            // 
+            // warning
+            // 
+            this.warning.AutoSize = true;
+            this.warning.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warning.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.warning.Location = new System.Drawing.Point(441, 355);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(16, 15);
+            this.warning.TabIndex = 50;
+            this.warning.Text = "...";
+            // 
+            // pas
+            // 
+            this.pas.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pas.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pas.Location = new System.Drawing.Point(205, 250);
+            this.pas.Name = "pas";
+            this.pas.Size = new System.Drawing.Size(138, 21);
+            this.pas.TabIndex = 53;
+            this.pas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pas.UseSystemPasswordChar = true;
+            // 
+            // cpass
+            // 
+            this.cpass.CausesValidation = false;
+            this.cpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cpass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cpass.Location = new System.Drawing.Point(558, 250);
+            this.cpass.Name = "cpass";
+            this.cpass.Size = new System.Drawing.Size(138, 21);
+            this.cpass.TabIndex = 54;
+            this.cpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cpass.UseSystemPasswordChar = true;
             // 
             // signup
             // 
@@ -220,15 +236,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cpass);
+            this.Controls.Add(this.pas);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.ShowConfirm);
             this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.L_Name);
             this.Controls.Add(this.F_Name);
-            this.Controls.Add(this.C_Password);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Password);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -239,6 +256,7 @@
             this.Controls.Add(this.label5);
             this.Name = "signup";
             this.Text = "signup";
+            this.Load += new System.EventHandler(this.signup_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,15 +271,16 @@
         private System.Windows.Forms.CheckBox ShowPassword;
         private System.Windows.Forms.TextBox L_Name;
         private System.Windows.Forms.TextBox F_Name;
-        private System.Windows.Forms.TextBox C_Password;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox UserID;
+        private System.Windows.Forms.Label warning;
+        private System.Windows.Forms.TextBox pas;
+        private System.Windows.Forms.TextBox cpass;
     }
 }

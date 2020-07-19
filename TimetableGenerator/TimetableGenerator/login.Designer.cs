@@ -32,12 +32,12 @@
             this.loginbut = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Show = new System.Windows.Forms.CheckBox();
-            this.Password_textBox = new System.Windows.Forms.TextBox();
-            this.UserID_textBox = new System.Windows.Forms.TextBox();
             this.SignUp = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Password_textBox = new System.Windows.Forms.TextBox();
+            this.UserID_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label5
@@ -76,30 +76,13 @@
             // 
             this.Show.AutoSize = true;
             this.Show.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Show.Location = new System.Drawing.Point(560, 226);
+            this.Show.Location = new System.Drawing.Point(533, 226);
             this.Show.Name = "Show";
             this.Show.Size = new System.Drawing.Size(108, 18);
             this.Show.TabIndex = 26;
             this.Show.Text = "Show Password";
             this.Show.UseVisualStyleBackColor = true;
             this.Show.CheckedChanged += new System.EventHandler(this.Show_CheckedChanged);
-            // 
-            // Password_textBox
-            // 
-            this.Password_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_textBox.Location = new System.Drawing.Point(347, 223);
-            this.Password_textBox.Name = "Password_textBox";
-            this.Password_textBox.Size = new System.Drawing.Size(186, 26);
-            this.Password_textBox.TabIndex = 25;
-            this.Password_textBox.UseSystemPasswordChar = true;
-            // 
-            // UserID_textBox
-            // 
-            this.UserID_textBox.Location = new System.Drawing.Point(347, 144);
-            this.UserID_textBox.Multiline = true;
-            this.UserID_textBox.Name = "UserID_textBox";
-            this.UserID_textBox.Size = new System.Drawing.Size(186, 28);
-            this.UserID_textBox.TabIndex = 24;
             // 
             // SignUp
             // 
@@ -111,6 +94,7 @@
             this.SignUp.TabIndex = 23;
             this.SignUp.Text = "SignUp";
             this.SignUp.UseVisualStyleBackColor = false;
+            this.SignUp.Click += new System.EventHandler(this.SignUp_Click);
             // 
             // label4
             // 
@@ -137,11 +121,35 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(217, 154);
+            this.label1.Location = new System.Drawing.Point(217, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 20;
             this.label1.Text = "User ID";
+            // 
+            // Password_textBox
+            // 
+            this.Password_textBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Password_textBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_textBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Password_textBox.Location = new System.Drawing.Point(347, 222);
+            this.Password_textBox.Name = "Password_textBox";
+            this.Password_textBox.Size = new System.Drawing.Size(138, 21);
+            this.Password_textBox.TabIndex = 54;
+            this.Password_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Password_textBox.UseSystemPasswordChar = true;
+            // 
+            // UserID_textBox
+            // 
+            this.UserID_textBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.UserID_textBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserID_textBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UserID_textBox.Location = new System.Drawing.Point(347, 161);
+            this.UserID_textBox.Name = "UserID_textBox";
+            this.UserID_textBox.Size = new System.Drawing.Size(138, 21);
+            this.UserID_textBox.TabIndex = 55;
+            this.UserID_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.UserID_textBox.UseSystemPasswordChar = true;
             // 
             // login
             // 
@@ -149,9 +157,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Show);
-            this.Controls.Add(this.Password_textBox);
             this.Controls.Add(this.UserID_textBox);
+            this.Controls.Add(this.Password_textBox);
+            this.Controls.Add(this.Show);
             this.Controls.Add(this.SignUp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -172,11 +180,11 @@
         private System.Windows.Forms.Button loginbut;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox Show;
-        private System.Windows.Forms.TextBox Password_textBox;
-        private System.Windows.Forms.TextBox UserID_textBox;
         private System.Windows.Forms.Button SignUp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Password_textBox;
+        private System.Windows.Forms.TextBox UserID_textBox;
     }
 }
