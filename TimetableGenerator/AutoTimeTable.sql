@@ -83,13 +83,14 @@ W_D VARCHAR(50)
 );
 
 CREATE TABLE TIMETABLE (
+T_ID VARCHAR(50) NOT NULL PRIMARY KEY,
 LEC1 VARCHAR(50),
 LEC2 VARCHAR(50),
 LEC3 VARCHAR(50),
 LEC4 VARCHAR(50),
+TBREAK VARCHAR(50),
 LEC5 VARCHAR(50),
 LEC6 VARCHAR(50),
-LEC7 VARCHAR(50),
 USID VARCHAR(25) FOREIGN KEY REFERENCES COURSE(ID) 
 );
 
@@ -168,9 +169,21 @@ SELECT TOP 100 [SUBJ8]
       ,[USID8]
   FROM [AutoTimeTable].[dbo].[SUBJECT8]
   
-  /****** Script for SelectTopNRows command from SSMS  ******/
+  /* ----------- Script for SelectTopNRows command from SSMS ------------- */
 SELECT TOP 1000 [ID]
       ,[COUESECODE]
       ,[SEMESTER]
       ,[ROOM]
   FROM [AutoTimeTable].[dbo].[COURSE]
+
+  /* ---------- Script for SelectTopNRows command from SSMS  ------------ */
+SELECT TOP 1000 [T_ID]
+      ,[LEC1]
+      ,[LEC2]
+      ,[LEC3]
+      ,[LEC4]
+      ,[TBREAK]
+      ,[LEC5]
+      ,[LEC6]
+      ,[USID]
+  FROM [AutoTimeTable].[dbo].[TIMETABLE]

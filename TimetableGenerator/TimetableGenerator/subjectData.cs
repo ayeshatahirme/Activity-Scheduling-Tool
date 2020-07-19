@@ -29,23 +29,62 @@ namespace TimetableGenerator
         {
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
             con.Open();
-            string query1 = "INSERT INTO SUBJECT1(SUBJ1, CRDHRS1, TEACHER1, SUBTYPE1, S_ID1)" +
-                "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
+            string query1 = "INSERT INTO SUBJECT1(SUBJ1, CHRS1, TEACHER1, SUBTYPE1, S_ID1)" +
+                "VALUES(@sub, @chrs, @teacher, @type, @usid)";
 
             SqlCommand cmd1 = new SqlCommand(query1, con);
-
+            
             cmd1.Parameters.AddWithValue("@sub", sub1.Text);
-            cmd1.Parameters.AddWithValue("@crdhrs", crd1.Text);
+            cmd1.Parameters.AddWithValue("@chrs", crd1.Text);
             cmd1.Parameters.AddWithValue("@teacher", t1.Text);
             cmd1.Parameters.AddWithValue("@type", th1.Text);
             cmd1.Parameters.AddWithValue("@usid", userID.Text);
             cmd1.ExecuteNonQuery();
+
+            // --------------- Storing primar key value ---------------
+            string storeID = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
+            SqlCommand cmd2 = new SqlCommand(storeID, con);
+            cmd2.Parameters.AddWithValue("@t_id", userID.Text);
+
+            if (th1.Text=="Lab")
+            {
+                string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3) VALUES(@l1, @l2, @l3)";
+                SqlCommand ls1 = new SqlCommand(s1, con);
+                cmd1.Parameters.AddWithValue("@l1", sub1.Text);
+                cmd1.Parameters.AddWithValue("@l2", sub1.Text);
+                cmd1.Parameters.AddWithValue("@l3", sub1.Text);
+            }
+            else if(th1.Text=="lab")
+            {
+                string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3) VALUES(@l1, @l2, @l3)";
+                SqlCommand ls1 = new SqlCommand(s1, con);
+                cmd1.Parameters.AddWithValue("@l1", sub1.Text);
+                cmd1.Parameters.AddWithValue("@l2", sub1.Text);
+                cmd1.Parameters.AddWithValue("@l3", sub1.Text);
+            }
+            else if(th1.Text=="Theory")
+            {
+                if(crd1.Text=="1")
+                {
+                    string st1 = "INSERT INTO TIMETABLE(LEC4) VALUES(@l4)";
+                    SqlCommand lst1 = new SqlCommand(st1, con);
+                    cmd1.Parameters.AddWithValue("@l4", sub1.Text);
+                }
+                else if(crd1.Text=="2")
+                {
+                    string st1 = "INSERT INTO TIMETABLE(LEC4) VALUES(@l4)";
+                    string sst1 = "INSERT INTO IMETABLE(LEC1) VALUES(@l1)";
+
+                    SqlCommand lst1 = new SqlCommand(st1, con);
+                    cmd1.Parameters.AddWithValue("@l4", sub1.Text);
+                }
+            }
             con.Close();
             
             //------------------------------------   2   ------------------------------
 
             con.Open();
-            string query2 = "INSERT INTO SUBJECT2(SUBJ2, CRDHRS2, TEACHER2, SUBTYPE2, S_ID2)" +
+            string query2 = "INSERT INTO SUBJECT2(SUBJ2, CHRS2, TEACHER2, SUBTYPE2, S_ID2)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd2 = new SqlCommand(query2, con);
@@ -61,7 +100,7 @@ namespace TimetableGenerator
             //------------------------------------   3   ------------------------------
 
             con.Open();
-            string query3 = "INSERT INTO SUBJECT3(SUBJ3, CRDHRS3, TEACHER3, SUBTYPE3, S_ID3)" +
+            string query3 = "INSERT INTO SUBJECT3(SUBJ3, CHRS3, TEACHER3, SUBTYPE3, S_ID3)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd3 = new SqlCommand(query3, con);
@@ -77,7 +116,7 @@ namespace TimetableGenerator
             //------------------------------------   4   ------------------------------
 
             con.Open();
-            string query4 = "INSERT INTO SUBJECT4(SUBJ4, CRDHRS4, TEACHER4, SUBTYPE4, S_ID4)" +
+            string query4 = "INSERT INTO SUBJECT4(SUBJ4, CHRS4, TEACHER4, SUBTYPE4, S_ID4)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd4 = new SqlCommand(query4, con);
@@ -93,7 +132,7 @@ namespace TimetableGenerator
             //------------------------------------   5   ------------------------------
 
             con.Open();
-            string query5 = "INSERT INTO SUBJECT5(SUBJ5, CRDHRS5, TEACHER5, SUBTYPE5, S_ID5)" +
+            string query5 = "INSERT INTO SUBJECT5(SUBJ5, CHRS5, TEACHER5, SUBTYPE5, S_ID5)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd5 = new SqlCommand(query5, con);
@@ -109,7 +148,7 @@ namespace TimetableGenerator
             //------------------------------------   6   ------------------------------
 
             con.Open();
-            string query6 = "INSERT INTO SUBJECT6(SUBJ6, CRDHRS6, TEACHER6, SUBTYPE6, S_ID6)" +
+            string query6 = "INSERT INTO SUBJECT6(SUBJ6, CHRS6, TEACHER6, SUBTYPE6, S_ID6)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd6 = new SqlCommand(query6, con);
@@ -125,7 +164,7 @@ namespace TimetableGenerator
             //------------------------------------   7   ------------------------------
 
             con.Open();
-            string query7 = "INSERT INTO SUBJECT7(SUBJ7, CRDHRS7, TEACHER7, SUBTYPE7, S_ID7)" +
+            string query7 = "INSERT INTO SUBJECT7(SUBJ7, CHRS7, TEACHER7, SUBTYPE7, S_ID7)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd7 = new SqlCommand(query7, con);
@@ -141,7 +180,7 @@ namespace TimetableGenerator
             //------------------------------------   8  -----------------------------
 
             con.Open();
-            string query8 = "INSERT INTO SUBJECT8(SUBJ8, CRDHRS8, TEACHER8, SUBTYPE8, S_ID8)" +
+            string query8 = "INSERT INTO SUBJECT8(SUBJ8, CHRS8, TEACHER8, SUBTYPE8, S_ID8)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
             SqlCommand cmd8 = new SqlCommand(query8, con);

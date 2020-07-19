@@ -43,8 +43,10 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
             con.Open();
+
+            // ------------------ Storing data in to subjects tables --------------------
 
             string query = "INSERT INTO COURSE(ID, COUESECODE, SEMESTER, ROOM)" +
                 "VALUES(@id, @c_code, @sem, @room_no)";
@@ -60,9 +62,9 @@ namespace TimetableGenerator
 
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Stored!");
-            
+                       
             con.Close();
-            */
+            
             this.Hide();
             generator ss = new generator();
             ss.Show();
