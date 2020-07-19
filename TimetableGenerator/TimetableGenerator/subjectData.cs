@@ -531,9 +531,9 @@ namespace TimetableGenerator
                 ls4.Parameters.AddWithValue("@l7_4", nill);
             }
 
-
+            MessageBox.Show("Data stored in database!");
             this.Hide();
-            addData ss1 = new addData();
+            generator ss1 = new generator();
             ss1.Show();
         }
 

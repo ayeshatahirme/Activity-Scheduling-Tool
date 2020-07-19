@@ -21,6 +21,28 @@ namespace TimetableGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
+            con.Open();
+
+            // ------------------ Storing data in to subjects tables --------------------
+
+            string query = "INSERT INTO COURSE(ID, COUESECODE, SEMESTER, ROOM)" +
+                "VALUES(@id, @c_code, @sem, @room_no)";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+
+
+            cmd.Parameters.AddWithValue("@id", userID.Text);
+            cmd.Parameters.AddWithValue("@c_code", code.Text);
+            cmd.Parameters.AddWithValue("@sem", sem.Text);
+            cmd.Parameters.AddWithValue("@room_no", roomno.Text);
+
+
+            cmd.ExecuteNonQuery();
+//            MessageBox.Show("Data Stored!");
+
+            con.Close();
+
             this.Hide();
             subjectData ss1 = new subjectData();
             ss1.Show();
@@ -43,28 +65,7 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
-            con.Open();
-
-            // ------------------ Storing data in to subjects tables --------------------
-
-            string query = "INSERT INTO COURSE(ID, COUESECODE, SEMESTER, ROOM)" +
-                "VALUES(@id, @c_code, @sem, @room_no)";
-
-            SqlCommand cmd = new SqlCommand(query, con);
-
-
-            cmd.Parameters.AddWithValue("@id", userID.Text);
-            cmd.Parameters.AddWithValue("@c_code", code.Text);
-            cmd.Parameters.AddWithValue("@sem", sem.Text);
-            cmd.Parameters.AddWithValue("@room_no", roomno.Text);
-
-
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Data Stored!");
                        
-            con.Close();
-            
             this.Hide();
             generator ss = new generator();
             ss.Show();
