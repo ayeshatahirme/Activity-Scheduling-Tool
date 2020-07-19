@@ -87,30 +87,6 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l3", sub1.Text);
                     ls1.Parameters.AddWithValue("@l4", nill);
                 }
-                else if (th1.Text=="theory")
-                {
-                    if (crd1.Text == "1")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l2", nill);
-                        ls1.Parameters.AddWithValue("@l3", nill);
-                        ls1.Parameters.AddWithValue("@l4", nill);
-                    }
-                    else if (crd1.Text == "2")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l3", nill);
-                        ls1.Parameters.AddWithValue("@l4", nill);
-                    }
-                    else if (crd1.Text == "3")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l3", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l4", nill);
-                    }
-                }
         //        ls1.ExecuteNonQuery();
             }
          //   con.Close();
@@ -146,22 +122,22 @@ namespace TimetableGenerator
                 if (crd1.Text == "1")
                 {
                     ls1.Parameters.AddWithValue("@tbreak", var);
-                    ls1.Parameters.AddWithValue("@l5", nill);
+                    ls1.Parameters.AddWithValue("@l5", sub2.Text);
                     ls1.Parameters.AddWithValue("@l6", nill);
                     ls1.Parameters.AddWithValue("@l7", nill);
                 }
                 else if (crd1.Text == "2")
                 {
                     ls1.Parameters.AddWithValue("@tbreak", var);
-                    ls1.Parameters.AddWithValue("@l5", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l5", sub2.Text);
                     ls1.Parameters.AddWithValue("@l6", nill);
                     ls1.Parameters.AddWithValue("@l7", nill);
                 }
                 else if (crd1.Text == "3")
                 {
                     ls1.Parameters.AddWithValue("@tbreak", var);
-                    ls1.Parameters.AddWithValue("@l5", sub1.Text);
-                    ls1.Parameters.AddWithValue("@l6", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l5", sub2.Text);
+                    ls1.Parameters.AddWithValue("@l6", sub2.Text);
                     ls1.Parameters.AddWithValue("@l7", nill);
                 }
 
