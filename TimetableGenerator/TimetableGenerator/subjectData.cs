@@ -57,52 +57,58 @@ namespace TimetableGenerator
 
             // ls1.Parameters.AddWithValue("@tbreak", var);
 
-            if (th1.Text=="Lab")
+            if (th1.Text == "Lab" || th1.Text == "lab" || th1.Text == "l")
             {
                 ls1.Parameters.AddWithValue("@l1", sub1.Text);
                 ls1.Parameters.AddWithValue("@l2", sub1.Text);
                 ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                ls1.Parameters.AddWithValue("@l4", nill);
             }
-            else if(th1.Text=="lab")
-            {
-                ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                ls1.Parameters.AddWithValue("@l3", sub1.Text);
-         
-            }
-            else if(th1.Text=="Theory")
+            else if(th1.Text=="Theory" || th1.Text == "theory" || th1.Text == "th")
             {
                 if(crd1.Text=="1")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l2", nill);
+                    ls1.Parameters.AddWithValue("@l3", nill);
+                    ls1.Parameters.AddWithValue("@l4", nill);
                 }
                 else if(crd1.Text=="2")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l3", nill);
+                    ls1.Parameters.AddWithValue("@l4", nill);
                 }
                 else if(crd1.Text=="3")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
                     ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l4", nill);
                 }
                 else if (th1.Text=="theory")
                 {
                     if (crd1.Text == "1")
                     {
                         ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l2", nill);
+                        ls1.Parameters.AddWithValue("@l3", nill);
+                        ls1.Parameters.AddWithValue("@l4", nill);
                     }
                     else if (crd1.Text == "2")
                     {
                         ls1.Parameters.AddWithValue("@l1", sub1.Text);
                         ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l3", nill);
+                        ls1.Parameters.AddWithValue("@l4", nill);
                     }
                     else if (crd1.Text == "3")
                     {
                         ls1.Parameters.AddWithValue("@l1", sub1.Text);
                         ls1.Parameters.AddWithValue("@l2", sub1.Text);
                         ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l4", nill);
                     }
                 }
         //        ls1.ExecuteNonQuery();
@@ -127,76 +133,39 @@ namespace TimetableGenerator
 
             // --------------------- TIMETABLE ------------------------
 
-            if (th2.Text == "Lab" && th1.Text == "Lab")
+            if (th2.Text == "Lab" || th2.Text == "lab" || th2.Text == "l")
             {
-                ls1.Parameters.AddWithValue("@l4", nill);
+                //ls1.Parameters.AddWithValue("@l4", nill);
                 ls1.Parameters.AddWithValue("@tbreak", var);
                 ls1.Parameters.AddWithValue("@l5", sub2.Text);
                 ls1.Parameters.AddWithValue("@l6", sub2.Text);
                 ls1.Parameters.AddWithValue("@l7", sub2.Text);
             }
-            else if (th2.Text == "lab" && th1.Text == "lab")
-            {
-                ls1.Parameters.AddWithValue("@l4", nill);
-                ls1.Parameters.AddWithValue("@tbreak", var);
-                ls1.Parameters.AddWithValue("@l5", sub2.Text);
-                ls1.Parameters.AddWithValue("@l6", sub2.Text);
-                ls1.Parameters.AddWithValue("@l7", sub2.Text);
-
-            }
-            else if (th2.Text == "lab" && th1.Text == "Lab")
-            {
-                ls1.Parameters.AddWithValue("@l4", nill);
-                ls1.Parameters.AddWithValue("@tbreak", var);
-                ls1.Parameters.AddWithValue("@l5", sub2.Text);
-                ls1.Parameters.AddWithValue("@l6", sub2.Text);
-                ls1.Parameters.AddWithValue("@l7", sub2.Text);
-
-            }
-            else if (th2.Text == "Lab" && th1.Text == "lab")
-            {
-                ls1.Parameters.AddWithValue("@l4", nill);
-                ls1.Parameters.AddWithValue("@tbreak", var);
-                ls1.Parameters.AddWithValue("@l5", sub2.Text);
-                ls1.Parameters.AddWithValue("@l6", sub2.Text);
-                ls1.Parameters.AddWithValue("@l7", sub2.Text);
-
-            }
-            else if (th2.Text == "Theory")
+            else if (th2.Text == "Theory" || th2.Text == "theory" || th2.Text == "th")
             {
                 if (crd1.Text == "1")
                 {
-                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", nill);
+                    ls1.Parameters.AddWithValue("@l6", nill);
+                    ls1.Parameters.AddWithValue("@l7", nill);
                 }
                 else if (crd1.Text == "2")
                 {
-                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l6", nill);
+                    ls1.Parameters.AddWithValue("@l7", nill);
                 }
                 else if (crd1.Text == "3")
                 {
-                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                    ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                    ls1.Parameters.AddWithValue("@tbreak", var);
+                    ls1.Parameters.AddWithValue("@l5", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l6", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l7", nill);
                 }
-                else if (th1.Text == "theory")
-                {
-                    if (crd1.Text == "1")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                    }
-                    else if (crd1.Text == "2")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                    }
-                    else if (crd1.Text == "3")
-                    {
-                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                        ls1.Parameters.AddWithValue("@l3", sub1.Text);
-                    }
-                }
+
+                
                 //        ls1.ExecuteNonQuery();
             }
             //------------------------------------   3   ------------------------------
