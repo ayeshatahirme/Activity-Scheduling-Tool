@@ -141,15 +141,11 @@
             // 
             // UserID_textBox
             // 
-            this.UserID_textBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UserID_textBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserID_textBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UserID_textBox.Location = new System.Drawing.Point(347, 161);
+            this.UserID_textBox.Location = new System.Drawing.Point(347, 159);
+            this.UserID_textBox.Multiline = true;
             this.UserID_textBox.Name = "UserID_textBox";
-            this.UserID_textBox.Size = new System.Drawing.Size(138, 21);
+            this.UserID_textBox.Size = new System.Drawing.Size(138, 20);
             this.UserID_textBox.TabIndex = 55;
-            this.UserID_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.UserID_textBox.UseSystemPasswordChar = true;
             // 
             // login
             // 

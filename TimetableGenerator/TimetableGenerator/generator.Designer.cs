@@ -32,6 +32,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.p1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbreak = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.userID = new System.Windows.Forms.TextBox();
@@ -41,14 +49,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.p1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbreak = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(275, 4);
+            this.label5.Location = new System.Drawing.Point(327, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(352, 41);
             this.label5.TabIndex = 31;
@@ -109,15 +109,63 @@
             this.dataGridView1.Size = new System.Drawing.Size(844, 310);
             this.dataGridView1.TabIndex = 34;
             // 
+            // p1
+            // 
+            this.p1.DataPropertyName = "LEC1";
+            this.p1.HeaderText = "Lecture 1 8:00 - 9:00 am";
+            this.p1.Name = "p1";
+            // 
+            // p2
+            // 
+            this.p2.DataPropertyName = "LEC2";
+            this.p2.HeaderText = "Lecture 2 9:00 - 10:00 am";
+            this.p2.Name = "p2";
+            // 
+            // p3
+            // 
+            this.p3.DataPropertyName = "LEC3";
+            this.p3.HeaderText = "Lecture 3 10:00 - 11:00 am";
+            this.p3.Name = "p3";
+            // 
+            // p4
+            // 
+            this.p4.DataPropertyName = "LEC4";
+            this.p4.HeaderText = "Lecture 4 11:00 - 12:00 am";
+            this.p4.Name = "p4";
+            // 
+            // pbreak
+            // 
+            this.pbreak.DataPropertyName = "TBREAK";
+            this.pbreak.HeaderText = "Break     12:00 - 1:00 pm";
+            this.pbreak.Name = "pbreak";
+            // 
+            // p5
+            // 
+            this.p5.DataPropertyName = "LEC5";
+            this.p5.HeaderText = "Lecture 5 1:00 - 2:00 pm";
+            this.p5.Name = "p5";
+            // 
+            // p6
+            // 
+            this.p6.DataPropertyName = "LEC6";
+            this.p6.HeaderText = "Lecture 6 2:00 - 3:00 pm";
+            this.p6.Name = "p6";
+            // 
+            // p7
+            // 
+            this.p7.DataPropertyName = "LEC7";
+            this.p7.HeaderText = "Lecture 7 3:00 - 4:00 pm";
+            this.p7.Name = "p7";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(273, 73);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 27);
+            this.button3.Size = new System.Drawing.Size(185, 27);
             this.button3.TabIndex = 35;
-            this.button3.Text = "Create Timetable";
+            this.button3.Text = "Show/Create Timetable";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -195,54 +243,6 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 41;
-            // 
-            // p1
-            // 
-            this.p1.DataPropertyName = "LEC1";
-            this.p1.HeaderText = "Lecture 1 8:00 - 9:00 am";
-            this.p1.Name = "p1";
-            // 
-            // p2
-            // 
-            this.p2.DataPropertyName = "LEC2";
-            this.p2.HeaderText = "Lecture 2 9:00 - 10:00 am";
-            this.p2.Name = "p2";
-            // 
-            // p3
-            // 
-            this.p3.DataPropertyName = "LEC3";
-            this.p3.HeaderText = "Lecture 3 10:00 - 11:00 am";
-            this.p3.Name = "p3";
-            // 
-            // p4
-            // 
-            this.p4.DataPropertyName = "LEC4";
-            this.p4.HeaderText = "Lecture 4 11:00 - 12:00 am";
-            this.p4.Name = "p4";
-            // 
-            // pbreak
-            // 
-            this.pbreak.DataPropertyName = "TBREAK";
-            this.pbreak.HeaderText = "Break     12:00 - 1:00 pm";
-            this.pbreak.Name = "pbreak";
-            // 
-            // p5
-            // 
-            this.p5.DataPropertyName = "LEC5";
-            this.p5.HeaderText = "Lecture 5 1:00 - 2:00 pm";
-            this.p5.Name = "p5";
-            // 
-            // p6
-            // 
-            this.p6.DataPropertyName = "LEC6";
-            this.p6.HeaderText = "Lecture 6 2:00 - 3:00 pm";
-            this.p6.Name = "p6";
-            // 
-            // p7
-            // 
-            this.p7.DataPropertyName = "LEC7";
-            this.p7.HeaderText = "Lecture 7 3:00 - 4:00 pm";
-            this.p7.Name = "p7";
             // 
             // label13
             // 

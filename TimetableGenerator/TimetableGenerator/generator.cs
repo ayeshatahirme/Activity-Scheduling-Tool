@@ -39,6 +39,7 @@ namespace TimetableGenerator
                 }
             }
             // ------------------------------ week days ------------------------------
+           
             /*string query = "SELECT * FROM WEEKDAYS";
             SqlDataAdapter sqlDa_week = new SqlDataAdapter(query, connectionString);
             DataTable dbtlweek = new DataTable();
