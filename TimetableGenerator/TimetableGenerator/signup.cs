@@ -30,5 +30,10 @@ namespace TimetableGenerator
             inputData ss1 = new inputData();
             ss1.Show();
         }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
