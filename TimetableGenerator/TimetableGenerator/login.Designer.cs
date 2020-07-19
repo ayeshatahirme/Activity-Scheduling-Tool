@@ -82,6 +82,7 @@
             this.Show.TabIndex = 26;
             this.Show.Text = "Show Password";
             this.Show.UseVisualStyleBackColor = true;
+            this.Show.CheckedChanged += new System.EventHandler(this.Show_CheckedChanged);
             // 
             // Password_textBox
             // 

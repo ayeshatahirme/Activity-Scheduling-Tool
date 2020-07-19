@@ -35,5 +35,29 @@ namespace TimetableGenerator
         {
 
         }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked)
+            {
+                Password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                Password.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void ShowConfirm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowConfirm.Checked)
+            {
+                C_Password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                C_Password.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

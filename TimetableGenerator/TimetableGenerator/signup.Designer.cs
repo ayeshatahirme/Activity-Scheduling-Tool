@@ -89,17 +89,19 @@
             this.ShowConfirm.TabIndex = 39;
             this.ShowConfirm.Text = "Show Password";
             this.ShowConfirm.UseVisualStyleBackColor = true;
+            this.ShowConfirm.CheckedChanged += new System.EventHandler(this.ShowConfirm_CheckedChanged);
             // 
             // ShowPassword
             // 
             this.ShowPassword.AutoSize = true;
             this.ShowPassword.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPassword.Location = new System.Drawing.Point(235, 286);
+            this.ShowPassword.Location = new System.Drawing.Point(235, 285);
             this.ShowPassword.Name = "ShowPassword";
             this.ShowPassword.Size = new System.Drawing.Size(108, 18);
             this.ShowPassword.TabIndex = 38;
             this.ShowPassword.Text = "Show Password";
             this.ShowPassword.UseVisualStyleBackColor = true;
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
             // 
             // L_Name
             // 
