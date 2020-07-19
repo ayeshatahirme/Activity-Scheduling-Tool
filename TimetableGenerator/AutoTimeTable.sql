@@ -186,4 +186,9 @@ SELECT TOP 100 [T_ID]
       ,[LEC5]
       ,[LEC6]
       ,[USID]
+	  ,[LEC7]
   FROM [AutoTimeTable].[dbo].[TIMETABLE]
+
+  /* ------------------------- WEEKDAYS ------------------------ */
+  SELECT TOP 1000 [W_D]
+  FROM [AutoTimeTable].[dbo].[WEEKDAYS]

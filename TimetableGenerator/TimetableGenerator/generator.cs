@@ -23,15 +23,11 @@ namespace TimetableGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // ------------------------ course details ----------------------------
+
             string labelData = "SELECT * FROM COURSE WHERE ID =" + int.Parse(userID.Text);
             SqlCommand labCmd = new SqlCommand(labelData, connectionString);
             connectionString.Open();
-            DataTable dbtl = new DataTable();
-            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT W_D FROM WEEKDAYS", connectionString);
-
-            sqlDa.Fill(dbtl);
-                
-            dataGridView1.DataSource = dbtl;
             
             using (SqlDataReader dr = labCmd.ExecuteReader())
             {
@@ -42,28 +38,22 @@ namespace TimetableGenerator
                     label8.Text = dr["ROOM"].ToString();
                 }
             }
-            
-            SqlDataAdapter sDa = new SqlDataAdapter("SELECT * FROM TIMETABLE", connectionString);
-            DataTable dtbl = new DataTable();
-            sqlDa.Fill(dtbl);
-            
-            dataGridView1.DataSource = dtbl;
+            // ------------------------------ week days ------------------------------
+            /*string query = "SELECT * FROM WEEKDAYS";
+            SqlDataAdapter sqlDa_week = new SqlDataAdapter(query, connectionString);
+            DataTable dbtlweek = new DataTable();
+            sqlDa_week.Fill(dbtlweek);
+            dataGridView1.DataSource = dbtlweek;
+            */
 
-            /*DataTable dtbl = new DataTable();
+            // ---------------------------- timetable ---------------------------------
 
-           SqlCommand cmd;
-           using (SqlConnection sqlCon = new SqlConnection(con))
-           {
-               sqlCon.Open();
-               SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT SUBJ1 FROM SUBJECT1", sqlCon);
-
-               sqlDa.Fill(dtbl);
-               
-               dataGridView1.DataSource = dtbl;
-
-   */
-
-
+            string q = "SELECT LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7 FROM TIMETABLE WHERE T_ID = " + int.Parse(userID.Text);
+            SqlDataAdapter sqlDa_timetable = new SqlDataAdapter(q, connectionString);
+            DataTable dbtltimetable = new DataTable();
+            sqlDa_timetable.Fill(dbtltimetable);
+            dataGridView1.DataSource = dbtltimetable;
+            connectionString.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,6 +71,11 @@ namespace TimetableGenerator
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generator_Load(object sender, EventArgs e)
         {
 
         }

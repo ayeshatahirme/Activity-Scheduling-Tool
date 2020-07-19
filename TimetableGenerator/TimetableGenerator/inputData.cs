@@ -35,5 +35,12 @@ namespace TimetableGenerator
             addData ss1 = new addData();
             ss1.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            generator ss1 = new generator();
+            ss1.Show();
+        }
     }
 }
