@@ -190,5 +190,6 @@ SELECT TOP 100 [T_ID]
   FROM [AutoTimeTable].[dbo].[TIMETABLE]
 
   /* ------------------------- WEEKDAYS ------------------------ */
+ 
   SELECT TOP 1000 [W_D]
   FROM [AutoTimeTable].[dbo].[WEEKDAYS]

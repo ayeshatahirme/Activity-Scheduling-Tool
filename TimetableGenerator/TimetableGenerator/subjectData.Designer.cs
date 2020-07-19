@@ -97,6 +97,7 @@
             this.th3 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.th2 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -697,12 +698,24 @@
             this.th2.Size = new System.Drawing.Size(100, 20);
             this.th2.TabIndex = 113;
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Red;
+            this.label35.Location = new System.Drawing.Point(623, 76);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(188, 15);
+            this.label35.TabIndex = 115;
+            this.label35.Text = "Write Theory/theory/th or Lab/lab/l";
+            // 
             // subjectData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(833, 527);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.th2);
             this.Controls.Add(this.label33);
@@ -849,5 +862,6 @@
         private System.Windows.Forms.TextBox th3;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox th2;
+        private System.Windows.Forms.Label label35;
     }
 }
