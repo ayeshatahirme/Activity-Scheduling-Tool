@@ -86,13 +86,31 @@ namespace TimetableGenerator
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
                     ls1.Parameters.AddWithValue("@l3", sub1.Text);
                 }
-                ls1.ExecuteNonQuery();
+                else if (th1.Text=="theory")
+                {
+                    if (crd1.Text == "1")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    }
+                    else if (crd1.Text == "2")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    }
+                    else if (crd1.Text == "3")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                    }
+                }
+        //        ls1.ExecuteNonQuery();
             }
-            con.Close();
+         //   con.Close();
             
             //------------------------------------   2   ------------------------------
 
-            con.Open();
+           // con.Open();
             string query2 = "INSERT INTO SUBJECT2(SUBJ2, CHRS2, TEACHER2, SUBTYPE2, S_ID2)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -104,11 +122,63 @@ namespace TimetableGenerator
             cmd2.Parameters.AddWithValue("@type", th2.Text);
             cmd2.Parameters.AddWithValue("@usid", userID.Text);
             cmd2.ExecuteNonQuery();
-            con.Close();
+            // con.Close();
 
+            // --------------------- TIMETABLE ------------------------
+
+            if (th1.Text == "Lab")
+            {
+                ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                ls1.Parameters.AddWithValue("@l3", sub1.Text);
+            }
+            else if (th1.Text == "lab")
+            {
+                ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                ls1.Parameters.AddWithValue("@l3", sub1.Text);
+
+            }
+            else if (th1.Text == "Theory")
+            {
+                if (crd1.Text == "1")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                }
+                else if (crd1.Text == "2")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                }
+                else if (crd1.Text == "3")
+                {
+                    ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                }
+                else if (th1.Text == "theory")
+                {
+                    if (crd1.Text == "1")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                    }
+                    else if (crd1.Text == "2")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                    }
+                    else if (crd1.Text == "3")
+                    {
+                        ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                        ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                    }
+                }
+                //        ls1.ExecuteNonQuery();
+            }
             //------------------------------------   3   ------------------------------
 
-            con.Open();
+            // con.Open();
             string query3 = "INSERT INTO SUBJECT3(SUBJ3, CHRS3, TEACHER3, SUBTYPE3, S_ID3)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -120,11 +190,11 @@ namespace TimetableGenerator
             cmd3.Parameters.AddWithValue("@type", th3.Text);
             cmd3.Parameters.AddWithValue("@usid", userID.Text);
             cmd3.ExecuteNonQuery();
-            con.Close();
+          //  con.Close();
 
             //------------------------------------   4   ------------------------------
 
-            con.Open();
+      //      con.Open();
             string query4 = "INSERT INTO SUBJECT4(SUBJ4, CHRS4, TEACHER4, SUBTYPE4, S_ID4)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -136,11 +206,11 @@ namespace TimetableGenerator
             cmd4.Parameters.AddWithValue("@type", th4.Text);
             cmd4.Parameters.AddWithValue("@usid", userID.Text);
             cmd4.ExecuteNonQuery();
-            con.Close();
+//            con.Close();
 
             //------------------------------------   5   ------------------------------
 
-            con.Open();
+          //  con.Open();
             string query5 = "INSERT INTO SUBJECT5(SUBJ5, CHRS5, TEACHER5, SUBTYPE5, S_ID5)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -152,11 +222,11 @@ namespace TimetableGenerator
             cmd5.Parameters.AddWithValue("@type", th5.Text);
             cmd5.Parameters.AddWithValue("@usid", userID.Text);
             cmd5.ExecuteNonQuery();
-            con.Close();
+   //         con.Close();
 
             //------------------------------------   6   ------------------------------
 
-            con.Open();
+      //      con.Open();
             string query6 = "INSERT INTO SUBJECT6(SUBJ6, CHRS6, TEACHER6, SUBTYPE6, S_ID6)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -168,11 +238,11 @@ namespace TimetableGenerator
             cmd6.Parameters.AddWithValue("@type", th6.Text);
             cmd6.Parameters.AddWithValue("@usid", userID.Text);
             cmd6.ExecuteNonQuery();
-            con.Close();
+     //       con.Close();
 
             //------------------------------------   7   ------------------------------
 
-            con.Open();
+    //        con.Open();
             string query7 = "INSERT INTO SUBJECT7(SUBJ7, CHRS7, TEACHER7, SUBTYPE7, S_ID7)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -184,11 +254,11 @@ namespace TimetableGenerator
             cmd7.Parameters.AddWithValue("@type", th7.Text);
             cmd7.Parameters.AddWithValue("@usid", userID.Text);
             cmd7.ExecuteNonQuery();
-            con.Close();
+      //      con.Close();
 
             //------------------------------------   8  -----------------------------
 
-            con.Open();
+        //    con.Open();
             string query8 = "INSERT INTO SUBJECT8(SUBJ8, CHRS8, TEACHER8, SUBTYPE8, S_ID8)" +
                 "VALUES(@sub, @crdhrs, @teacher, @type, @usid)";
 
@@ -200,7 +270,7 @@ namespace TimetableGenerator
             cmd8.Parameters.AddWithValue("@type", th8.Text);
             cmd8.Parameters.AddWithValue("@usid", userID.Text);
             cmd8.ExecuteNonQuery();
-            con.Close();
+   //         con.Close();
                         
             this.Hide();
             addData ss1 = new addData();
