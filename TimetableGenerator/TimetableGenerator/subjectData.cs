@@ -284,7 +284,6 @@ namespace TimetableGenerator
                     ls2.Parameters.AddWithValue("@l6_2", sub4.Text);
                     ls2.Parameters.AddWithValue("@l7_2", sub4.Text);
                 }
-                ls2.ExecuteNonQuery();
             }
             else if ((th4.Text == "Theory" || th4.Text == "theory" || th4.Text == "th") && (th3.Text == "Theory" || th3.Text == "theory" || th3.Text == "th") && (crd3.Text == "1" || crd3.Text == "2" || crd3.Text == "3"))
             {
@@ -320,9 +319,10 @@ namespace TimetableGenerator
                 ls2.Parameters.AddWithValue("@l6_2", nill);
                 ls2.Parameters.AddWithValue("@l7_2", nill);
             }
-            //------------------------------------   5   ------------------------------
+            ls2.ExecuteNonQuery();
 
-            //  con.Open();
+            //------------------------------------   5   ------------------------------
+            
             string query5 = "INSERT INTO SUBJECT5(SUBJ5, CHRS5, SUBTYPE5, S_ID5)" +
                 "VALUES(@sub, @crdhrs, @type, @usid)";
 
@@ -333,12 +333,7 @@ namespace TimetableGenerator
             cmd5.Parameters.AddWithValue("@type", th5.Text);
             cmd5.Parameters.AddWithValue("@usid", userID.Text);
             cmd5.ExecuteNonQuery();
-            //         con.Close();
-
-
-            // --------------- Storing primary key value ---------------
-
-
+            
 
             // --------------------- TIMETABLE ------------------------
             string s3 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7) VALUES(@t_id_3, @l1_3, @l2_3, @l3_3, @l4_3, @tbreak_3, @l5_3, @l6_3, @l7_3)";
@@ -390,7 +385,6 @@ namespace TimetableGenerator
 
             //------------------------------------   6   ------------------------------
 
-            //      con.Open();
             string query6 = "INSERT INTO SUBJECT6(SUBJ6, CHRS6, SUBTYPE6, S_ID6)" +
                 "VALUES(@sub, @crdhrs, @type, @usid)";
 
@@ -434,7 +428,6 @@ namespace TimetableGenerator
                     ls3.Parameters.AddWithValue("@l6_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@l7_3", sub6.Text);
                 }
-                ls3.ExecuteNonQuery();
             }
             else if ((th6.Text == "Theory" || th6.Text == "theory" || th6.Text == "th") && (th5.Text == "Theory" || th5.Text == "theory" || th5.Text == "th") && (crd5.Text == "1" || crd5.Text == "2" || crd5.Text == "3"))
             {
@@ -470,10 +463,10 @@ namespace TimetableGenerator
                 ls3.Parameters.AddWithValue("@l6_3", nill);
                 ls3.Parameters.AddWithValue("@l7_3", nill);
             }
+            ls3.ExecuteNonQuery();
 
             //------------------------------------   7   ------------------------------
 
-            //        con.Open();
             string query7 = "INSERT INTO SUBJECT7(SUBJ7, CHRS7, SUBTYPE7, S_ID7)" +
                 "VALUES(@sub, @crdhrs, @type, @usid)";
 
@@ -486,6 +479,7 @@ namespace TimetableGenerator
             cmd7.ExecuteNonQuery();
 
             // --------------------- TIMETABLE ------------------------
+
             string s4 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7) VALUES(@t_id_4, @l1_4, @l2_4, @l3_4, @l4_4, @tbreak_4, @l5_4, @l6_4, @l7_4)";
             SqlCommand ls4 = new SqlCommand(s4, con);
 
@@ -578,7 +572,6 @@ namespace TimetableGenerator
                     ls4.Parameters.AddWithValue("@l6_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@l7_4", sub8.Text);
                 }
-                ls4.ExecuteNonQuery();
             }
             else if ((th8.Text == "Theory" || th8.Text == "theory" || th8.Text == "th") && (th7.Text == "Theory" || th7.Text == "theory" || th7.Text == "th") && (crd7.Text == "1" || crd7.Text == "2" || crd7.Text == "3"))
             {
@@ -614,6 +607,7 @@ namespace TimetableGenerator
                 ls4.Parameters.AddWithValue("@l6_4", nill);
                 ls4.Parameters.AddWithValue("@l7_4", nill);
             }
+            ls4.ExecuteNonQuery();
 
             MessageBox.Show("Data stored in database!");
             this.Hide();

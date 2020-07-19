@@ -40,6 +40,7 @@
             this.code = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.userID = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -154,12 +155,24 @@
             this.userID.Size = new System.Drawing.Size(100, 20);
             this.userID.TabIndex = 30;
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.Location = new System.Drawing.Point(551, 104);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(151, 15);
+            this.label36.TabIndex = 117;
+            this.label36.Text = "Remeber the choosen ID. ";
+            // 
             // addData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.userID);
             this.Controls.Add(this.label6);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.TextBox code;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox userID;
+        private System.Windows.Forms.Label label36;
     }
 }

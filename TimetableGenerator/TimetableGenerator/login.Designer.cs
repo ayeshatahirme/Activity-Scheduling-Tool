@@ -113,9 +113,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(217, 225);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 18);
+            this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Password";
+            this.label2.Text = "Password:";
             // 
             // label1
             // 
@@ -123,9 +123,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(217, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 20;
-            this.label1.Text = "User ID";
+            this.label1.Text = "Username:";
             // 
             // Password_textBox
             // 
