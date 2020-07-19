@@ -41,20 +41,14 @@ namespace TimetableGenerator
             cmd1.Parameters.AddWithValue("@usid", userID.Text);
             cmd1.ExecuteNonQuery();
 
-            // --------------- Storing primary key value ---------------
-
-            string storeID1 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd_id1 = new SqlCommand(storeID1, con);
-            cmd_id1.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd_id1.ExecuteNonQuery();
-
+           
             // --------------------- TIMETABLE ------------------------
 
-            string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, TBREAK LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @tbreak, @l5, @l6, @l7)";
+            string s1 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK LEC5, LEC6, LEC7) VALUES(@t_id, @l1, @l2, @l3, @l4, @tbreak, @l5, @l6, @l7)";
             SqlCommand ls1 = new SqlCommand(s1, con);
             string var = "BREAK";
             string nill = "-";
-
+            ls1.Parameters.AddWithValue("@t_id", userID.Text);
             // ls1.Parameters.AddWithValue("@tbreak", var);
 
             if (th1.Text == "Lab" || th1.Text == "lab" || th1.Text == "l")
@@ -162,14 +156,11 @@ namespace TimetableGenerator
 
             // --------------- Storing primary key value ---------------
 
-            string storeID2 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd_id2 = new SqlCommand(storeID2, con);
-            cmd_id2.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd_id2.ExecuteNonQuery();
+            ls1.Parameters.AddWithValue("@t_id", userID.Text);
 
             // --------------------- TIMETABLE ------------------------
 
-            
+
             if (th3.Text == "Lab" || th3.Text == "lab" || th3.Text == "l")
             {
                 ls1.Parameters.AddWithValue("@l1", sub3.Text);
@@ -274,10 +265,7 @@ namespace TimetableGenerator
 
             // --------------- Storing primary key value ---------------
 
-            string storeID3 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd_id3 = new SqlCommand(storeID3, con);
-            cmd_id3.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd_id3.ExecuteNonQuery();
+            ls1.Parameters.AddWithValue("@t_id", userID.Text);
 
             // --------------------- TIMETABLE ------------------------
 
@@ -387,10 +375,7 @@ namespace TimetableGenerator
 
             // --------------- Storing primary key value ---------------
 
-            string storeID4 = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd_id4 = new SqlCommand(storeID2, con);
-            cmd_id4.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd_id4.ExecuteNonQuery();
+            ls1.Parameters.AddWithValue("@t_id", userID.Text);
 
             // --------------------- TIMETABLE ------------------------
 
