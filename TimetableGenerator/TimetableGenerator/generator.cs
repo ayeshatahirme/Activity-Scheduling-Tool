@@ -14,7 +14,7 @@ namespace TimetableGenerator
 {
     public partial class generator : Form
     {
-        string connectionString = @"Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True;";
+        SqlConnection connectionString = new SqlConnection (@"Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
 
         public generator()
         {
@@ -23,23 +23,43 @@ namespace TimetableGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            string labelData = "SELECT * FROM COURSE WHERE ID =" + int.Parse(userID.Text);
+            SqlCommand labCmd = new SqlCommand(labelData, connectionString);
+            connectionString.Open();
+            DataTable dbtl = new DataTable();
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT W_D FROM WEEKDAYS", connectionString);
 
-            dt.Columns.Add("Lecture 1 8:00-9:00 am");
-            dt.Columns.Add("Lecture 2 9:00-10:00 am");
-            dt.Columns.Add("Lecture 3 10:00-11:00 am");
-            dt.Columns.Add("Lecture 4 11:00-12:00 pm");
-            dt.Columns.Add("Break  12:00-1:00 pm");
-            dt.Columns.Add("Lecture 5 1:00-2:00 pm");
-            dt.Columns.Add("Lecture 6 2:00-3:00 pm");
-            dt.Columns.Add("Lecture 7 3:00-4:00 pm");
+            sqlDa.Fill(dbtl);
+                
+            dataGridView1.DataSource = dbtl;
+            
+            using (SqlDataReader dr = labCmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    label4.Text = dr["COUESECODE"].ToString();
+                    label6.Text = dr["SEMESTER"].ToString();
+                    label8.Text = dr["ROOM"].ToString();
+                }
+            }
+            /* DataTable dt = new DataTable();
 
-            dt.Rows.Add("Monday ");
-            dt.Rows.Add("Tuesday ");
-            dt.Rows.Add("Wednesday ");
-            dt.Rows.Add("Thursday ");
-            dt.Rows.Add("Friday ");
-            dataGridView1.DataSource = dt;
+                       dt.Columns.Add("Lecture 1 8:00-9:00 am");
+                       dt.Columns.Add("Lecture 2 9:00-10:00 am");
+                       dt.Columns.Add("Lecture 3 10:00-11:00 am");
+                       dt.Columns.Add("Lecture 4 11:00-12:00 pm");
+                       dt.Columns.Add("Break  12:00-1:00 pm");
+                       dt.Columns.Add("Lecture 5 1:00-2:00 pm");
+                       dt.Columns.Add("Lecture 6 2:00-3:00 pm");
+                       dt.Columns.Add("Lecture 7 3:00-4:00 pm");
+
+                       dt.Rows.Add("Monday ");
+                       dt.Rows.Add("Tuesday ");
+                       dt.Rows.Add("Wednesday ");
+                       dt.Rows.Add("Thursday ");
+                       dt.Rows.Add("Friday ");
+                       dataGridView1.DataSource = dt;
+                       */
 
             /*DataTable dtbl = new DataTable();
 
@@ -50,8 +70,7 @@ namespace TimetableGenerator
                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT SUBJ1 FROM SUBJECT1", sqlCon);
 
                sqlDa.Fill(dtbl);
-
-           //    dataGridView1.AutoGenerateColumns = false;
+               
                dataGridView1.DataSource = dtbl;
 
    */
@@ -59,7 +78,7 @@ namespace TimetableGenerator
 
         }
 
-            private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 ss1 = new Form1();
@@ -71,6 +90,11 @@ namespace TimetableGenerator
             this.Hide();
             addData ss1 = new addData();
             ss1.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

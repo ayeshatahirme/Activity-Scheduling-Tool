@@ -61,8 +61,7 @@ namespace TimetableGenerator
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Stored!");
             
-                //  clearData();
-                con.Close();
+            con.Close();
             */
             this.Hide();
             generator ss = new generator();
