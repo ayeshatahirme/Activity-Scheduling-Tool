@@ -42,24 +42,12 @@ namespace TimetableGenerator
                     label8.Text = dr["ROOM"].ToString();
                 }
             }
-            /* DataTable dt = new DataTable();
-
-                       dt.Columns.Add("Lecture 1 8:00-9:00 am");
-                       dt.Columns.Add("Lecture 2 9:00-10:00 am");
-                       dt.Columns.Add("Lecture 3 10:00-11:00 am");
-                       dt.Columns.Add("Lecture 4 11:00-12:00 pm");
-                       dt.Columns.Add("Break  12:00-1:00 pm");
-                       dt.Columns.Add("Lecture 5 1:00-2:00 pm");
-                       dt.Columns.Add("Lecture 6 2:00-3:00 pm");
-                       dt.Columns.Add("Lecture 7 3:00-4:00 pm");
-
-                       dt.Rows.Add("Monday ");
-                       dt.Rows.Add("Tuesday ");
-                       dt.Rows.Add("Wednesday ");
-                       dt.Rows.Add("Thursday ");
-                       dt.Rows.Add("Friday ");
-                       dataGridView1.DataSource = dt;
-                       */
+            
+            SqlDataAdapter sDa = new SqlDataAdapter("SELECT * FROM TIMETABLE", connectionString);
+            DataTable dtbl = new DataTable();
+            sqlDa.Fill(dtbl);
+            
+            dataGridView1.DataSource = dtbl;
 
             /*DataTable dtbl = new DataTable();
 

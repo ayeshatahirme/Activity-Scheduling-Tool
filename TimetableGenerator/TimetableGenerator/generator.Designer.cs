@@ -100,9 +100,9 @@
             this.p5,
             this.p6,
             this.p7});
-            this.dataGridView1.Location = new System.Drawing.Point(70, 130);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 130);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(914, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(944, 365);
             this.dataGridView1.TabIndex = 34;
             // 
             // Column2
