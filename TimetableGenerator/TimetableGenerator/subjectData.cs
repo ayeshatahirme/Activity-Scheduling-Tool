@@ -53,6 +53,7 @@ namespace TimetableGenerator
             string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, TBREAK LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @tbreak, @l5, @l6, @l7)";
             SqlCommand ls1 = new SqlCommand(s1, con);
             string var = "BREAK";
+            string nill = "-";
 
             // ls1.Parameters.AddWithValue("@tbreak", var);
 
@@ -126,20 +127,42 @@ namespace TimetableGenerator
 
             // --------------------- TIMETABLE ------------------------
 
-            if (th1.Text == "Lab")
+            if (th2.Text == "Lab" && th1.Text == "Lab")
             {
-                ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@tbreak", var);
+                ls1.Parameters.AddWithValue("@l5", sub2.Text);
+                ls1.Parameters.AddWithValue("@l6", sub2.Text);
+                ls1.Parameters.AddWithValue("@l7", sub2.Text);
             }
-            else if (th1.Text == "lab")
+            else if (th2.Text == "lab" && th1.Text == "lab")
             {
-                ls1.Parameters.AddWithValue("@l1", sub1.Text);
-                ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                ls1.Parameters.AddWithValue("@l3", sub1.Text);
+                ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@tbreak", var);
+                ls1.Parameters.AddWithValue("@l5", sub2.Text);
+                ls1.Parameters.AddWithValue("@l6", sub2.Text);
+                ls1.Parameters.AddWithValue("@l7", sub2.Text);
 
             }
-            else if (th1.Text == "Theory")
+            else if (th2.Text == "lab" && th1.Text == "Lab")
+            {
+                ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@tbreak", var);
+                ls1.Parameters.AddWithValue("@l5", sub2.Text);
+                ls1.Parameters.AddWithValue("@l6", sub2.Text);
+                ls1.Parameters.AddWithValue("@l7", sub2.Text);
+
+            }
+            else if (th2.Text == "Lab" && th1.Text == "lab")
+            {
+                ls1.Parameters.AddWithValue("@l4", nill);
+                ls1.Parameters.AddWithValue("@tbreak", var);
+                ls1.Parameters.AddWithValue("@l5", sub2.Text);
+                ls1.Parameters.AddWithValue("@l6", sub2.Text);
+                ls1.Parameters.AddWithValue("@l7", sub2.Text);
+
+            }
+            else if (th2.Text == "Theory")
             {
                 if (crd1.Text == "1")
                 {
