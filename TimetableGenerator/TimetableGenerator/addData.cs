@@ -56,7 +56,6 @@ namespace TimetableGenerator
         }
         void clearData()
         {
-
             userID.Text = "";
             code.Text = "";
             sem.Text = "";
@@ -66,9 +65,9 @@ namespace TimetableGenerator
         private void button2_Click(object sender, EventArgs e)
         {
                        
-            this.Hide();
-            generator ss = new generator();
-            ss.Show();
+            //this.Hide();
+           // generator ss = new generator();
+           // ss.Show();
         }
     }
 }
