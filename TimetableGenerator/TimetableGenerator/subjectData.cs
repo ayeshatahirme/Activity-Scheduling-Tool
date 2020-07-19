@@ -41,50 +41,46 @@ namespace TimetableGenerator
             cmd1.Parameters.AddWithValue("@usid", userID.Text);
             cmd1.ExecuteNonQuery();
 
-            // --------------- Storing primar key value ---------------
+            // --------------- Storing primary key value ---------------
 
             string storeID = "INSERT INTO TIMETABLE(T_ID) VALUE(@t_id)";
-            SqlCommand cmd2 = new SqlCommand(storeID, con);
-            cmd2.Parameters.AddWithValue("@t_id", userID.Text);
-            cmd2.ExecuteNonQuery();
+            SqlCommand cmd_id = new SqlCommand(storeID, con);
+            cmd_id.Parameters.AddWithValue("@t_id", userID.Text);
+            cmd_id.ExecuteNonQuery();
 
             // --------------------- TIMETABLE ------------------------
 
             string s1 = "INSERT INTO TIMETABLE(LEC1, LEC2, LEC3, LEC4, LEC5, LEC6, LEC7) VALUES(@l1, @l2, @l3, @l4, @l5, @l6, @l7)";
             SqlCommand ls1 = new SqlCommand(s1, con);
             if (th1.Text=="Lab")
-            {                
-                cmd1.Parameters.AddWithValue("@l1", sub1.Text);
-                cmd1.Parameters.AddWithValue("@l2", sub1.Text);
-                cmd1.Parameters.AddWithValue("@l3", sub1.Text);
+            {
+                ls1.Parameters.AddWithValue("@l1", sub1.Text);
+                ls1.Parameters.AddWithValue("@l2", sub1.Text);
+                ls1.Parameters.AddWithValue("@l3", sub1.Text);
             }
             else if(th1.Text=="lab")
             {
                 ls1.Parameters.AddWithValue("@l1", sub1.Text);
                 ls1.Parameters.AddWithValue("@l2", sub1.Text);
                 ls1.Parameters.AddWithValue("@l3", sub1.Text);
-              //  ls1.ExecuteNonQuery();
+         
             }
             else if(th1.Text=="Theory")
             {
                 if(crd1.Text=="1")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
-               //     ls1.ExecuteNonQuery();
                 }
                 else if(crd1.Text=="2")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
-                    
-
                 }
                 else if(crd1.Text=="3")
                 {
                     ls1.Parameters.AddWithValue("@l1", sub1.Text);
                     ls1.Parameters.AddWithValue("@l2", sub1.Text);
                     ls1.Parameters.AddWithValue("@l3", sub1.Text);
-                  //  lst1.ExecuteNonQuery();
                 }
                 ls1.ExecuteNonQuery();
             }
