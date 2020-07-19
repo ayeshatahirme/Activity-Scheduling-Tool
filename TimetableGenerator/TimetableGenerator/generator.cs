@@ -39,7 +39,7 @@ namespace TimetableGenerator
                 }
             }
             // ------------------------------ week days ------------------------------
-
+           
             /*string query = "SELECT * FROM WEEKDAYS";
             SqlDataAdapter sqlDa_week = new SqlDataAdapter(query, connectionString);
             DataTable dbtlweek = new DataTable();
@@ -48,9 +48,9 @@ namespace TimetableGenerator
             */
 
             // ---------------------------- timetable ---------------------------------
-            
-            string dataValue = userID.Text;
-            string q = "SELECT LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7 FROM TIMETABLE WHERE T_ID = " + dataValue;
+
+
+            string q = "SELECT LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7 FROM TIMETABLE WHERE T_ID = " + int.Parse(userID.Text);
             SqlDataAdapter sqlDa_timetable = new SqlDataAdapter(q, connectionString);
             DataTable dbtltimetable = new DataTable();
             sqlDa_timetable.Fill(dbtltimetable);
