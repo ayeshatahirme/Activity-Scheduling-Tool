@@ -650,7 +650,9 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            addData ss1 = new addData();
+            ss1.Show();
         }
 
         private void sub2_TextChanged(object sender, EventArgs e)
