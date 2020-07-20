@@ -92,6 +92,7 @@
             this.Controls.Add(this.label5);
             this.Name = "inputData";
             this.Text = "inputData";
+            this.Load += new System.EventHandler(this.inputData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+/* *************************************** SIGNUP PAGE ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +26,8 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THIS BUTTON WILL TAKE YOU BACK ON PREVIOUS PAGE --------------------
+
             this.Hide();
             Form1 ss1 = new Form1();
             ss1.Show();
@@ -30,6 +35,8 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE SIGNUP BUTTON WILL LET YOU MAKE AN ACCOUNT --------------------
+
             string Username = UserID.Text;
             string FirstName = F_Name.Text;
             string LastName = L_Name.Text;

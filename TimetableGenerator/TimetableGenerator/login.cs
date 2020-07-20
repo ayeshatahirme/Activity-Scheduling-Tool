@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+/* *************************************** LOGIN PAGE ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +24,8 @@ namespace TimetableGenerator
 
         private void loginbut_Click(object sender, EventArgs e)
         {
+            // ------------------ LOGIN BUTTON WILL LET YOU LOGIN THE ACCOUNT --------------------
+
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
             
             // Storing data in a string from textbox
@@ -40,7 +45,7 @@ namespace TimetableGenerator
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                MessageBox.Show("You are Login Successfully");
+                MessageBox.Show("You are Logged in Successfully");
                 this.Hide();
                 inputData ss1 = new inputData();
                 ss1.Show();
@@ -56,6 +61,8 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ------------------ IT WILL TAKE YOU BACK ON PREVIOUS PAGE --------------------
+
             this.Hide();
             Form1 ss1 = new Form1();
             ss1.Show();
@@ -75,9 +82,16 @@ namespace TimetableGenerator
 
         private void SignUp_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE THIS BUTTON WILL LET YOU MAKE AN ACCOUNT --------------------
+
             this.Hide();
             signup ss1 = new signup();
             ss1.Show();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,9 +53,9 @@
             // loginbut
             // 
             this.loginbut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbut.Location = new System.Drawing.Point(667, 378);
+            this.loginbut.Location = new System.Drawing.Point(377, 243);
             this.loginbut.Name = "loginbut";
-            this.loginbut.Size = new System.Drawing.Size(94, 33);
+            this.loginbut.Size = new System.Drawing.Size(91, 30);
             this.loginbut.TabIndex = 7;
             this.loginbut.Text = "Login";
             this.loginbut.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // 
             this.Show.AutoSize = true;
             this.Show.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Show.Location = new System.Drawing.Point(533, 226);
+            this.Show.Location = new System.Drawing.Point(532, 193);
             this.Show.Name = "Show";
             this.Show.Size = new System.Drawing.Size(108, 18);
             this.Show.TabIndex = 26;
@@ -88,9 +88,9 @@
             // 
             this.SignUp.BackColor = System.Drawing.Color.Gainsboro;
             this.SignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUp.Location = new System.Drawing.Point(391, 300);
+            this.SignUp.Location = new System.Drawing.Point(447, 324);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(94, 33);
+            this.SignUp.Size = new System.Drawing.Size(87, 33);
             this.SignUp.TabIndex = 23;
             this.SignUp.Text = "SignUp";
             this.SignUp.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(211, 305);
+            this.label4.Location = new System.Drawing.Point(282, 330);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 18);
             this.label4.TabIndex = 22;
@@ -111,7 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(217, 225);
+            this.label2.Location = new System.Drawing.Point(227, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 18);
             this.label2.TabIndex = 21;
@@ -121,7 +121,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(217, 161);
+            this.label1.Location = new System.Drawing.Point(227, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 20;
@@ -132,7 +132,7 @@
             this.Password_textBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Password_textBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password_textBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Password_textBox.Location = new System.Drawing.Point(347, 222);
+            this.Password_textBox.Location = new System.Drawing.Point(357, 191);
             this.Password_textBox.Name = "Password_textBox";
             this.Password_textBox.Size = new System.Drawing.Size(138, 21);
             this.Password_textBox.TabIndex = 54;
@@ -141,7 +141,7 @@
             // 
             // UserID_textBox
             // 
-            this.UserID_textBox.Location = new System.Drawing.Point(347, 159);
+            this.UserID_textBox.Location = new System.Drawing.Point(357, 138);
             this.UserID_textBox.Multiline = true;
             this.UserID_textBox.Name = "UserID_textBox";
             this.UserID_textBox.Size = new System.Drawing.Size(138, 20);
@@ -165,6 +165,7 @@
             this.Controls.Add(this.label5);
             this.Name = "login";
             this.Text = "login";
+            this.Load += new System.EventHandler(this.login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

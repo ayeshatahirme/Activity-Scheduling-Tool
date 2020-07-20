@@ -41,13 +41,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.userID = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(486, 283);
+            this.button3.Location = new System.Drawing.Point(486, 290);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 31);
             this.button3.TabIndex = 19;
@@ -81,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(298, 195);
+            this.label2.Location = new System.Drawing.Point(298, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 24;
@@ -89,7 +90,7 @@
             // 
             // sem
             // 
-            this.sem.Location = new System.Drawing.Point(432, 193);
+            this.sem.Location = new System.Drawing.Point(432, 200);
             this.sem.Name = "sem";
             this.sem.Size = new System.Drawing.Size(100, 20);
             this.sem.TabIndex = 23;
@@ -98,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(298, 238);
+            this.label3.Location = new System.Drawing.Point(298, 245);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 26;
@@ -106,7 +107,7 @@
             // 
             // roomno
             // 
-            this.roomno.Location = new System.Drawing.Point(432, 236);
+            this.roomno.Location = new System.Drawing.Point(432, 243);
             this.roomno.Name = "roomno";
             this.roomno.Size = new System.Drawing.Size(100, 20);
             this.roomno.TabIndex = 25;
@@ -115,7 +116,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(190, 291);
+            this.label4.Location = new System.Drawing.Point(190, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(272, 18);
             this.label4.TabIndex = 27;
@@ -125,7 +126,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(298, 149);
+            this.label6.Location = new System.Drawing.Point(298, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 18);
             this.label6.TabIndex = 29;
@@ -133,7 +134,7 @@
             // 
             // code
             // 
-            this.code.Location = new System.Drawing.Point(432, 147);
+            this.code.Location = new System.Drawing.Point(432, 154);
             this.code.Name = "code";
             this.code.Size = new System.Drawing.Size(100, 20);
             this.code.TabIndex = 28;
@@ -142,7 +143,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(298, 106);
+            this.label7.Location = new System.Drawing.Point(298, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 18);
             this.label7.TabIndex = 31;
@@ -150,7 +151,7 @@
             // 
             // userID
             // 
-            this.userID.Location = new System.Drawing.Point(432, 104);
+            this.userID.Location = new System.Drawing.Point(432, 111);
             this.userID.Name = "userID";
             this.userID.Size = new System.Drawing.Size(100, 20);
             this.userID.TabIndex = 30;
@@ -160,11 +161,22 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(551, 104);
+            this.label36.Location = new System.Drawing.Point(551, 111);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(151, 15);
             this.label36.TabIndex = 117;
             this.label36.Text = "Remeber the choosen ID. ";
+            // 
+            // logout
+            // 
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.Location = new System.Drawing.Point(679, 36);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(84, 31);
+            this.logout.TabIndex = 119;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // addData
             // 
@@ -172,6 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.userID);
@@ -187,6 +200,7 @@
             this.Controls.Add(this.label5);
             this.Name = "addData";
             this.Text = "addData";
+            this.Load += new System.EventHandler(this.addData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +220,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox userID;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button logout;
     }
 }

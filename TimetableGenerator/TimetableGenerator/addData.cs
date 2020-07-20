@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+/* *************************************** PAGE TO ADD DATA REGARDING TIMETABLE ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,9 +42,10 @@ namespace TimetableGenerator
 
 
             cmd.ExecuteNonQuery();
-//            MessageBox.Show("Data Stored!");
 
             con.Close();
+
+            // ------------------ CLICKING THE SUBJECT BUTTON WILL LET YOU ENTER SUBJECT DETAILS --------------------
 
             this.Hide();
             subjectData ss1 = new subjectData();
@@ -50,24 +54,29 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE BACK BUTTON WILL TAKE YOU ON PREVIOUS PAGE --------------------
+
             this.Hide();
             inputData ss1 = new inputData();
             ss1.Show();
         }
-        void clearData()
-        {
-            userID.Text = "";
-            code.Text = "";
-            sem.Text = "";
-            roomno.Text = "";
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-                       
-           this.Hide();
-           generator ss = new generator();
-           ss.Show();
+           
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            // ------------------ CLICKING THE LOGOUT BUTTON WILL LET YOU GO BACK TO LOGIN PAGE --------------------
+
+            this.Hide();
+            login ss = new login();
+            ss.Show();
+        }
+
+        private void addData_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

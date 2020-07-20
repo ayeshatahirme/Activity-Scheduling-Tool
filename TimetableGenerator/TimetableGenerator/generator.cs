@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+/* *************************************** PAGE THAT SHOWS GENERATED TIMETABLE ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +26,9 @@ namespace TimetableGenerator
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE SHOW/CREATE TIMETABLE BUTTON WILL LET YOU 
+            //                                GENERATE OR SEE YOUR TIMETABLE         --------------------
+
             // ------------------------ course details ----------------------------
 
             string labelData = "SELECT * FROM COURSE WHERE ID =" + int.Parse(userID.Text);
@@ -46,9 +52,8 @@ namespace TimetableGenerator
             sqlDa_week.Fill(dbtlweek);
             dataGridView1.DataSource = dbtlweek;
             */
-
-            // ---------------------------- timetable ---------------------------------
-
+            
+            // ---------------------------- DISPLAYING THE GENERATED TIMETABLE ------------------------
 
             string q = "SELECT LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7 FROM TIMETABLE WHERE T_ID = " + int.Parse(userID.Text);
             SqlDataAdapter sqlDa_timetable = new SqlDataAdapter(q, connectionString);
@@ -60,6 +65,8 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE ALL DONE BUTTON MEANS YOU HAVE DONE YOUR WORK --------------------
+
             this.Hide();
             Form1 ss1 = new Form1();
             ss1.Show();
@@ -67,6 +74,8 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THE BACK BUTTON WILL TAKE YOU YOU TO PREVIOUS PAGE --------------------
+
             this.Hide();
             inputData ss1 = new inputData();
             ss1.Show();
@@ -80,6 +89,15 @@ namespace TimetableGenerator
         private void generator_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            // ------------------ CLICKING THE LOGOUT BUTTON WILL TAKE  YOU BACK ON LOGIN PAGE --------------------
+
+            this.Hide();
+            login ss1 = new login();
+            ss1.Show();
         }
     }
 }

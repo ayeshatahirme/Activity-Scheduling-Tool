@@ -84,6 +84,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -124,7 +125,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(648, 457);
+            this.button2.Location = new System.Drawing.Point(713, 457);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 33);
             this.button2.TabIndex = 30;
@@ -581,12 +582,24 @@
             this.label2.TabIndex = 117;
             this.label2.Text = "*maximum 3 contact hours available.";
             // 
+            // logout
+            // 
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.Location = new System.Drawing.Point(713, 22);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(84, 31);
+            this.logout.TabIndex = 118;
+            this.logout.Text = "Logout";
+            this.logout.UseVisualStyleBackColor = true;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // subjectData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(833, 527);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
@@ -645,6 +658,7 @@
             this.Controls.Add(this.label5);
             this.Name = "subjectData";
             this.Text = "subjectData";
+            this.Load += new System.EventHandler(this.subjectData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,5 +721,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button logout;
     }
 }

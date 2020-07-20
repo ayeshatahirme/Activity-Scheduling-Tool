@@ -1,4 +1,8 @@
-﻿using System;
+﻿
+/* *************************************** PAGE THAT ASKS IF USRE WANTS TO GENERATE A NEW TIMETABLE 
+ *                                                    OR SEE THE PREVIOUS ONE .       ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +35,8 @@ namespace TimetableGenerator
 
         private void button4_Click(object sender, EventArgs e)
         {
+            // ------------------ IT WILL LET YOU GENERATE A NEW TIMETABLE --------------------
+
             this.Hide();
             addData ss1 = new addData();
             ss1.Show();
@@ -38,9 +44,16 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // ------------------ IT WILL SHOW YOU YOUR GENERATED TIMETABLE --------------------
+
             this.Hide();
             generator ss1 = new generator();
             ss1.Show();
+        }
+
+        private void inputData_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

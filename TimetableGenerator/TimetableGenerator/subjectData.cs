@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+/* *************************************** PAGE TO ADD SUBJECT DATA FOR TIMETABLE ************************************ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +30,8 @@ namespace TimetableGenerator
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THIS BUTTON WILL LET YOU LEAVE THE PAGE --------------------
+
             SqlConnection con = new SqlConnection("Data Source=DESKTOP-6FG9FQD;Initial Catalog=AutoTimeTable;Integrated Security=True");
             con.Open();
 
@@ -627,6 +632,8 @@ namespace TimetableGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // ------------------ CLICKING THIS BUTTON WILL MOVE YOU ON THE PREVIOUS PAGE --------------------
+
             this.Hide();
             addData ss1 = new addData();
             ss1.Show();
@@ -643,6 +650,20 @@ namespace TimetableGenerator
         }
 
         private void th1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            // ------------------ LOGOUT FUNCTIONALITY; MOVED TO LOGIN PAGE --------------------
+
+            this.Hide();
+            login ss1 = new login();
+            ss1.Show();
+        }
+
+        private void subjectData_Load(object sender, EventArgs e)
         {
 
         }
