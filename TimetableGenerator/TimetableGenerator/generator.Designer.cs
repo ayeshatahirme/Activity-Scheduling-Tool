@@ -56,7 +56,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.logout = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -317,24 +316,12 @@
             this.logout.UseVisualStyleBackColor = true;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(442, 446);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 33);
-            this.button4.TabIndex = 121;
-            this.button4.Text = "Download file";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(995, 546);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
@@ -394,6 +381,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn p6;
         private System.Windows.Forms.DataGridViewTextBoxColumn p7;
         private System.Windows.Forms.Button logout;
-        private System.Windows.Forms.Button button4;
     }
 }
