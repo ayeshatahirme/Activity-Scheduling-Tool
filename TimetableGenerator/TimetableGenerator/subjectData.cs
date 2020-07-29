@@ -177,8 +177,11 @@ namespace TimetableGenerator
             }
             else if ((th2.Text == "Theory" || th2.Text == "theory" || th2.Text == "th") && (th1.Text == "Lab" || th1.Text == "lab" || th1.Text == "l"))
             {
+                // If subject 1 is a lab and subject 2 is theory then lectures are arranges in following manner
                 if (crd2.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned the one lecture slot;
+                    // 4th slot on first day of the week
                     ls1.Parameters.AddWithValue("@l4", sub2.Text);
                     ls1.Parameters.AddWithValue("@tbreak", var);
                     ls1.Parameters.AddWithValue("@l5", nill);
@@ -187,6 +190,8 @@ namespace TimetableGenerator
                 }
                 else if (crd2.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned the two consective lecture slots;
+                    // 4th and 5th slot on first day of the week
                     ls1.Parameters.AddWithValue("@l4", sub2.Text);
                     ls1.Parameters.AddWithValue("@tbreak", var);
                     ls1.Parameters.AddWithValue("@l5", sub2.Text);
@@ -195,6 +200,8 @@ namespace TimetableGenerator
                 }
                 else if (crd2.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned the three consective lecture slots;
+                    // 4th, 5th and 6th slot on first day of the week
                     ls1.Parameters.AddWithValue("@l4", sub2.Text);
                     ls1.Parameters.AddWithValue("@tbreak", var);
                     ls1.Parameters.AddWithValue("@l5", sub2.Text);
@@ -204,6 +211,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls1.Parameters.AddWithValue("@l4", nill);
                 ls1.Parameters.AddWithValue("@tbreak", var);
                 ls1.Parameters.AddWithValue("@l5", nill);
@@ -270,6 +278,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls2.Parameters.AddWithValue("@t_id_2", userID.Text);
                 ls2.Parameters.AddWithValue("@l1_2", nill);
                 ls2.Parameters.AddWithValue("@l2_2", nill);
@@ -361,6 +370,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls2.Parameters.AddWithValue("@l4_2", nill);
                 ls2.Parameters.AddWithValue("@tbreak_2", var);
                 ls2.Parameters.AddWithValue("@l5_2", nill);
@@ -428,6 +438,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls3.Parameters.AddWithValue("@t_id_3", userID.Text);
                 ls3.Parameters.AddWithValue("@l1_3", nill);
                 ls3.Parameters.AddWithValue("@l2_3", nill);
@@ -518,6 +529,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls3.Parameters.AddWithValue("@l4_3", nill);
                 ls3.Parameters.AddWithValue("@tbreak_3", var);
                 ls3.Parameters.AddWithValue("@l5_3", nill);
@@ -584,6 +596,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls4.Parameters.AddWithValue("@t_id_4", userID.Text);
                 ls4.Parameters.AddWithValue("@l1_4", nill);
                 ls4.Parameters.AddWithValue("@l2_4", nill);
@@ -674,6 +687,7 @@ namespace TimetableGenerator
             }
             else
             {
+                // Incase no data is entered, the slots are left nill
                 ls4.Parameters.AddWithValue("@l4_4", nill);
                 ls4.Parameters.AddWithValue("@tbreak_4", var);
                 ls4.Parameters.AddWithValue("@l5_4", nill);
