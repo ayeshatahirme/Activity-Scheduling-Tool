@@ -128,8 +128,6 @@ namespace TimetableGenerator
             cmd2.Parameters.AddWithValue("@usid", userID.Text);
             cmd2.ExecuteNonQuery();
 
-            // --------------------- TIMETABLE ------------------------
-
             // If it is lab entered in subject 2 textbox, then it is adjusted such that 3 slots are 
             // assigned to it of 3 hours 
             if (th2.Text == "Lab" || th2.Text == "lab" || th2.Text == "l")
@@ -234,8 +232,6 @@ namespace TimetableGenerator
             cmd3.Parameters.AddWithValue("@usid", userID.Text);
             cmd3.ExecuteNonQuery();
 
-            // --------------------- TIMETABLE ------------------------
-
             // Inserting the lecture in database table of TIMETABLE in sequence of after applying conditions
 
             string s2 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7) VALUES(@t_id_2, @l1_2, @l2_2, @l3_2, @l4_2, @tbreak_2, @l5_2, @l6_2, @l7_2)";
@@ -304,9 +300,6 @@ namespace TimetableGenerator
             cmd4.Parameters.AddWithValue("@type", th4.Text);
             cmd4.Parameters.AddWithValue("@usid", userID.Text);
             cmd4.ExecuteNonQuery();
-
-
-            // --------------------- TIMETABLE ------------------------
 
             // If it is lab entered in subject 4 textbox, then it is adjusted such that 3 slots are 
             // assigned to it of 3 hours 
@@ -412,9 +405,6 @@ namespace TimetableGenerator
             cmd5.Parameters.AddWithValue("@usid", userID.Text);
             cmd5.ExecuteNonQuery();
 
-
-            // --------------------- TIMETABLE ------------------------
-
             // Inserting the lecture in database table of TIMETABLE in sequence of after applying conditions
 
             string s3 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7) VALUES(@t_id_3, @l1_3, @l2_3, @l3_3, @l4_3, @tbreak_3, @l5_3, @l6_3, @l7_3)";
@@ -483,8 +473,6 @@ namespace TimetableGenerator
             cmd6.Parameters.AddWithValue("@type", th6.Text);
             cmd6.Parameters.AddWithValue("@usid", userID.Text);
             cmd6.ExecuteNonQuery();
-
-            // --------------------- TIMETABLE ------------------------
 
             // If it is lab entered in subject 6 textbox, then it is adjusted such that 3 slots are 
             // assigned to it of 3 hours 
@@ -590,8 +578,6 @@ namespace TimetableGenerator
             cmd7.Parameters.AddWithValue("@usid", userID.Text);
             cmd7.ExecuteNonQuery();
 
-            // --------------------- TIMETABLE ------------------------
-
             // Inserting the lecture in database table of TIMETABLE in sequence of after applying conditions
 
             string s4 = "INSERT INTO TIMETABLE(T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7) VALUES(@t_id_4, @l1_4, @l2_4, @l3_4, @l4_4, @tbreak_4, @l5_4, @l6_4, @l7_4)";
@@ -660,8 +646,6 @@ namespace TimetableGenerator
             cmd8.Parameters.AddWithValue("@type", th8.Text);
             cmd8.Parameters.AddWithValue("@usid", userID.Text);
             cmd8.ExecuteNonQuery();
-
-            // --------------------- TIMETABLE ------------------------
 
             // If it is lab entered in subject 8 textbox, then it is adjusted such that 3 slots are 
             // assigned to it of 3 hours 
