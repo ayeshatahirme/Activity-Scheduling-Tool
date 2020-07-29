@@ -180,7 +180,7 @@ namespace TimetableGenerator
                 // If subject 1 is a lab and subject 2 is theory then lectures are arranges in following manner
                 if (crd2.Text == "1")
                 {
-                    // If the contact hour of subject is 1, then it is assigned the one lecture slot;
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
                     // 4th slot on first day of the week
                     ls1.Parameters.AddWithValue("@l4", sub2.Text);
                     ls1.Parameters.AddWithValue("@tbreak", var);
@@ -256,7 +256,7 @@ namespace TimetableGenerator
                 // hours mentioned
                 if (crd3.Text == "1")
                 {
-                    // If the contact hour of subject is 1, then it is assigned the one lecture slot;
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
                     // first slot on second day of the week
                     ls2.Parameters.AddWithValue("@t_id_2", userID.Text);
                     ls2.Parameters.AddWithValue("@l1_2", sub3.Text);
@@ -502,6 +502,8 @@ namespace TimetableGenerator
                 // hours mentioned
                 if (crd6.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
+                    // 4th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_3", var);
                     ls3.Parameters.AddWithValue("@l5_3", nill);
@@ -510,6 +512,8 @@ namespace TimetableGenerator
                 }
                 else if (crd6.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned the two consective lecture slots;
+                    // 4th and 5th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_3", var);
                     ls3.Parameters.AddWithValue("@l5_3", sub6.Text);
@@ -518,6 +522,8 @@ namespace TimetableGenerator
                 }
                 else if (crd6.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned the three consective lecture slots;
+                    // 4th, 5th and 6th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_3", var);
                     ls3.Parameters.AddWithValue("@l5_3", sub6.Text);
@@ -530,6 +536,8 @@ namespace TimetableGenerator
                 // If subject 5 is a lab and subject 6 is theory then lectures are arranges in following manner
                 if (crd6.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
+                    // 4th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_2", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_2", var);
                     ls3.Parameters.AddWithValue("@l5_2", nill);
@@ -538,6 +546,8 @@ namespace TimetableGenerator
                 }
                 else if (crd6.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned the two consective lecture slots;
+                    // 4th and 5th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_3", var);
                     ls3.Parameters.AddWithValue("@l5_3", sub6.Text);
@@ -546,6 +556,8 @@ namespace TimetableGenerator
                 }
                 else if (crd6.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned the three consective lecture slots;
+                    // 4th, 5th and 6th lecture slot on third day of the week
                     ls3.Parameters.AddWithValue("@l4_3", sub6.Text);
                     ls3.Parameters.AddWithValue("@tbreak_3", var);
                     ls3.Parameters.AddWithValue("@l5_3", sub6.Text);
@@ -600,6 +612,8 @@ namespace TimetableGenerator
                 // hours mentioned
                 if (crd7.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
+                    // first lecture slot on fourth day of the week
                     ls4.Parameters.AddWithValue("@t_id_4", userID.Text);
                     ls4.Parameters.AddWithValue("@l1_4", sub7.Text);
                     ls4.Parameters.AddWithValue("@l2_4", nill);
@@ -607,6 +621,8 @@ namespace TimetableGenerator
                 }
                 else if (crd7.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned the two consective lecture slots;
+                    // first two lecture slot on fourth day of the week
                     ls4.Parameters.AddWithValue("@t_id_4", userID.Text);
                     ls4.Parameters.AddWithValue("@l1_4", sub7.Text);
                     ls4.Parameters.AddWithValue("@l2_4", sub7.Text);
@@ -614,6 +630,8 @@ namespace TimetableGenerator
                 }
                 else if (crd7.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned the three consective lecture slots;
+                    // first three lecture slot on fourth day of the week
                     ls4.Parameters.AddWithValue("@t_id_4", userID.Text);
                     ls4.Parameters.AddWithValue("@l1_4", sub7.Text);
                     ls4.Parameters.AddWithValue("@l2_4", sub7.Text);
@@ -661,6 +679,8 @@ namespace TimetableGenerator
                 // hours mentioned
                 if (crd8.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
+                    // 4th lecture slot on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", nill);
@@ -669,6 +689,8 @@ namespace TimetableGenerator
                 }
                 else if (crd8.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned two consective lecture slots;
+                    // 4th and 5th lecture slots on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", sub8.Text);
@@ -677,6 +699,8 @@ namespace TimetableGenerator
                 }
                 else if (crd8.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned three consective lecture slots;
+                    // 4th, 5th and 6th lecture slots on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", sub8.Text);
@@ -689,6 +713,8 @@ namespace TimetableGenerator
                 // If subject 7 is a lab and subject 8 is theory then lectures are arranges in following manner
                 if (crd8.Text == "1")
                 {
+                    // If the contact hour of subject is 1, then it is assigned one lecture slot;
+                    // 4th lecture slots on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", nill);
@@ -697,6 +723,8 @@ namespace TimetableGenerator
                 }
                 else if (crd8.Text == "2")
                 {
+                    // If the contact hour of subject is 2, then it is assigned two consective lecture slots;
+                    // 4th and 5th lecture slots on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", sub8.Text);
@@ -705,6 +733,8 @@ namespace TimetableGenerator
                 }
                 else if (crd8.Text == "3")
                 {
+                    // If the contact hour of subject is 3, then it is assigned three consective lecture slots;
+                    // 4th, 5th and 6th lecture slots on fourth day of the week
                     ls4.Parameters.AddWithValue("@l4_4", sub8.Text);
                     ls4.Parameters.AddWithValue("@tbreak_4", var);
                     ls4.Parameters.AddWithValue("@l5_4", sub8.Text);
@@ -722,6 +752,8 @@ namespace TimetableGenerator
                 ls4.Parameters.AddWithValue("@l7_4", nill);
             }
             ls4.ExecuteNonQuery();
+
+
 
             MessageBox.Show("Data stored in database!");
             this.Hide();
