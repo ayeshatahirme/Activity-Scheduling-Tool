@@ -752,10 +752,12 @@ namespace TimetableGenerator
                 ls4.Parameters.AddWithValue("@l7_4", nill);
             }
             ls4.ExecuteNonQuery();
-
-
-
+            
+            // After storing data in respective tables in database, the message is displayed
+            // The message informs user that data is stored in database
             MessageBox.Show("Data stored in database!");
+            
+            // The page subjectData hides when Done button is pressed and next generator page appears
             this.Hide();
             generator ss1 = new generator();
             ss1.Show();
@@ -764,7 +766,7 @@ namespace TimetableGenerator
         private void button1_Click(object sender, EventArgs e)
         {
             // ------------------ CLICKING THIS BUTTON WILL MOVE YOU ON THE PREVIOUS PAGE --------------------
-
+            // The page subjectData hides when Back button is pressed and addData page appears
             this.Hide();
             addData ss1 = new addData();
             ss1.Show();
@@ -791,7 +793,7 @@ namespace TimetableGenerator
         private void logout_Click(object sender, EventArgs e)
         {
             // ------------------ LOGOUT FUNCTIONALITY; MOVED TO LOGIN PAGE --------------------
-
+            // The page subjectData hides when Logout button is pressed and login page appears
             this.Hide();
             login ss1 = new login();
             ss1.Show();
