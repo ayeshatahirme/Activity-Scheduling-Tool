@@ -1,16 +1,20 @@
-Pseudo code
+# Pseudo code
 
-# INPUTS:
+## INPUTS:
+
 SUBNAME, CHRS, SUBTYPE, T_ID, LEC1, LEC2, LEC3, LEC4, TBREAK, LEC5, LEC6, LEC7
 Maximum M_SUBJECT 8
-Algorithm:
-Structure SUBJECT
+
+## Algorithm:
+
+###Structure SUBJECT
 {
  SUBNAME
  CHRS
  SUBTYPE
 }
-Structure TIMETABLE
+
+### Structure TIMETABLE
 {
   T_ID
  LEC1
@@ -22,7 +26,8 @@ TBREAK
  LEC6
  LEC7
 }
-SLOT_ALLOCATION (SUBJECT S[ ], TIMETABLE T [ ] , M_SUBJECT)
+
+### SLOT_ALLOCATION (SUBJECT S[ ], TIMETABLE T [ ] , M_SUBJECT)
 {   
    Let  WEEKDAY = 1
         For i=1 to M_SUBJECT
