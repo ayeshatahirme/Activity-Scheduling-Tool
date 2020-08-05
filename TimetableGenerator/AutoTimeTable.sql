@@ -1,180 +1,296 @@
 
-CREATE TABLE COURSE (
-ID VARCHAR(25) NOT NULL PRIMARY KEY,
-COUESECODE VARCHAR(50),
-SEMESTER VARCHAR(25) NOT NULL,
-ROOM VARCHAR(25) NOT NULL
-);
-
-CREATE TABLE SUBJECT1 ( 
-SUBJ1 VARCHAR(25),
-CHRS1 VARCHAR(30),
-SUBTYPE1 VARCHAR(50),
-S_ID1 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT2 ( 
-SUBJ2 VARCHAR(25),
-CHRS2 VARCHAR(30),
-SUBTYPE2 VARCHAR(50),
-S_ID2 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT3 ( 
-SUBJ3 VARCHAR(25),
-CHRS3 VARCHAR(30),
-SUBTYPE3 VARCHAR(50),
-S_ID3 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT4 ( 
-SUBJ4 VARCHAR(25),
-CHRS4 VARCHAR(30),
-SUBTYPE4 VARCHAR(50),
-S_ID4 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT5 ( 
-SUBJ5 VARCHAR(25),
-CHRS5 VARCHAR(30),
-TEACHER5 VARCHAR(50),
-SUBTYPE5 VARCHAR(50),
-S_ID5 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT6 ( 
-SUBJ6 VARCHAR(25),
-CHRS6 VARCHAR(30),
-SUBTYPE6 VARCHAR(50),
-S_ID6 VARCHAR(25)
-);
-
-CREATE TABLE SUBJECT7 ( 
-SUBJ7 VARCHAR(25),
-CHRS7 VARCHAR(30),
-SUBTYPE7 VARCHAR(50),
-S_ID7 VARCHAR(25),
-USID7 VARCHAR(25) FOREIGN KEY REFERENCES COURSE(ID) 
-);
-
-CREATE TABLE SUBJECT8 ( 
-SUBJ8 VARCHAR(25),
-CHRS8 VARCHAR(30),
-SUBTYPE8 VARCHAR(50),
-S_ID8 VARCHAR(25)
-);
-
-CREATE TABLE WEEKDAYS ( 
-W_D VARCHAR(50)
-);
-
-CREATE TABLE [dbo].[TIMETABLE] (
-[T_ID] [VARCHAR](500) NOT NULL PRIMARY KEY,
-[LEC1] [VARCHAR](500),
-[LEC2] [VARCHAR](500),
-[LEC3] [VARCHAR](500),
-[LEC4] [VARCHAR](500),
-[TBREAK] [VARCHAR](500),
-[LEC5] [VARCHAR](500),
-[LEC6] [VARCHAR](500),
-[LEC7] [VARCHAR](500)
-);
+/* DATABASE FOR TIMETABLE GENERATOR TOLL PROJECT */
+/*************** COURSES TABLE ***********/
+USE [AutoTimeTable]
 GO
-  /* ----------------------- 1 ------------------------- */
 
-SELECT TOP 100 [SUBJ1]
-      ,[CHRS1]
-      ,[SUBTYPE1]
-      ,[S_ID1]
-  FROM [AutoTimeTable].[dbo].[SUBJECT1]
-  
-  /* ----------------------- 2 ------------------------- */
-SELECT TOP 100 [SUBJ2]
-      ,[CHRS2]
-      ,[SUBTYPE2]
-      ,[S_ID2]
-  FROM [AutoTimeTable].[dbo].[SUBJECT2]
-  
-  /* ----------------------- 3 ------------------------- */
-SELECT TOP 100 [SUBJ3]
-      ,[CHRS3]
-      ,[SUBTYPE3]
-      ,[S_ID3]
-  FROM [AutoTimeTable].[dbo].[SUBJECT3]
+/****** Object:  Table [dbo].[COURSE]    Script Date: 8/5/2020 2:55:03 PM ******/
+SET ANSI_NULLS ON
+GO
 
-  /* ----------------------- 4 ------------------------- */  
-SELECT TOP 100 [SUBJ4]
-      ,[CHRS4]
-      ,[SUBTYPE4]
-      ,[S_ID4]
-  FROM [AutoTimeTable].[dbo].[SUBJECT4]
-  
-  /* ----------------------- 5 ------------------------- */
-SELECT TOP 100 [SUBJ5]
-      ,[CHRS5]
-      ,[SUBTYPE5]
-      ,[S_ID5]
-  FROM [AutoTimeTable].[dbo].[SUBJECT5]
-  
-  /* ----------------------- 6 ------------------------- */
-SELECT TOP 100 [SUBJ6]
-      ,[CHRS6]
-      ,[SUBTYPE6]
-      ,[S_ID6]
-  FROM [AutoTimeTable].[dbo].[SUBJECT6]
-  
-  /* ----------------------- 7 ------------------------- */
-SELECT TOP 100 [SUBJ7]
-      ,[CHRS7]
-      ,[SUBTYPE7]
-      ,[S_ID7]
-  FROM [AutoTimeTable].[dbo].[SUBJECT7]
-  
-  /* ----------------------- 8 ------------------------- */
-SELECT TOP 100 [SUBJ8]
-      ,[CHRS8]
-      ,[SUBTYPE8]
-      ,[S_ID8]
-  FROM [AutoTimeTable].[dbo].[SUBJECT8]
-  
-  /* ----------- Script for SelectTopNRows command from SSMS ------------- */
-SELECT TOP 1000 [ID]
-      ,[COUESECODE]
-      ,[SEMESTER]
-      ,[ROOM]
-  FROM [AutoTimeTable].[dbo].[COURSE]
+SET QUOTED_IDENTIFIER ON
+GO
 
-  /* ---------- Script for SelectTopNRows command from SSMS  ------------ */
-SELECT TOP 100 [T_ID]
-      ,[LEC1]
-      ,[LEC2]
-      ,[LEC3]
-      ,[LEC4]
-      ,[TBREAK]
-      ,[LEC5]
-      ,[LEC6]
-      ,[USID]
-	  ,[LEC7]
-  FROM [AutoTimeTable].[dbo].[TIMETABLE]
+SET ANSI_PADDING ON
+GO
 
+CREATE TABLE [dbo].[COURSE](
+	[ID] [varchar](25) NOT NULL,
+	[COUESECODE] [varchar](50) NOT NULL,
+	[SEMESTER] [varchar](25) NOT NULL,
+	[ROOM] [varchar](25) NOT NULL,
+ CONSTRAINT [PK_COURSE] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
 
-  /* ------------------------- WEEKDAYS ------------------------ */
- 
-  SELECT TOP 1000 [W_D]
-  FROM [AutoTimeTable].[dbo].[WEEKDAYS]
+GO
 
-  /* ------------------------- USER TABLE ------------------------- */
-  SELECT TOP 100 [UserID]
-      ,[FirstName]
-      ,[LastName]
-      ,[Email]
-      ,[Password]
-  FROM [AutoTimeTable].[dbo].[UserTable]
-  
-  SELECT CAST('3000000000' AS BIGINT)
-SELECT CAST('-3000000000' AS BIGINT)
+SET ANSI_PADDING OFF
+GO
 
-ALTER TABLE [dbo].[TIMETABLE]
-ALTER COLUMN [T_ID] BIGINT
-ALTER COLUMN [LEC1] BIGINT
-ALTER COLUMN [LEC2] BIGINT
+/*************** SUBJECT1 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT1]    Script Date: 8/5/2020 2:57:00 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT1](
+	[SUBJ1] [varchar](25) NULL,
+	[CHRS1] [varchar](30) NULL,
+	[SUBTYPE1] [varchar](50) NULL,
+	[S_ID1] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT2 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT2]    Script Date: 8/5/2020 2:57:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT2](
+	[SUBJ2] [varchar](25) NULL,
+	[CHRS2] [varchar](30) NULL,
+	[SUBTYPE2] [varchar](50) NULL,
+	[S_ID2] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT3 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT3]    Script Date: 8/5/2020 2:57:27 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT3](
+	[SUBJ3] [varchar](25) NULL,
+	[CHRS3] [varchar](30) NULL,
+	[SUBTYPE3] [varchar](50) NULL,
+	[S_ID3] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT4 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT4]    Script Date: 8/5/2020 2:57:45 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT4](
+	[SUBJ4] [varchar](25) NULL,
+	[CHRS4] [varchar](30) NULL,
+	[SUBTYPE4] [varchar](50) NULL,
+	[S_ID4] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT5 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT5]    Script Date: 8/5/2020 2:57:56 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT5](
+	[SUBJ5] [varchar](25) NULL,
+	[CHRS5] [varchar](30) NULL,
+	[SUBTYPE5] [varchar](50) NULL,
+	[S_ID5] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT6 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT6]    Script Date: 8/5/2020 2:58:22 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT6](
+	[SUBJ6] [varchar](25) NULL,
+	[CHRS6] [varchar](30) NULL,
+	[SUBTYPE6] [varchar](50) NULL,
+	[S_ID6] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT7 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT7]    Script Date: 8/5/2020 2:58:36 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT7](
+	[SUBJ7] [varchar](25) NULL,
+	[CHRS7] [varchar](30) NULL,
+	[SUBTYPE7] [varchar](50) NULL,
+	[S_ID7] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** SUBJECT8 TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[SUBJECT8]    Script Date: 8/5/2020 2:58:47 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[SUBJECT8](
+	[SUBJ8] [varchar](25) NULL,
+	[CHRS8] [varchar](30) NULL,
+	[SUBTYPE8] [varchar](50) NULL,
+	[S_ID8] [varchar](25) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/*************** USER TABLE ***********/
+USE [AutoTimeTable]
+GO
+
+/****** Object:  Table [dbo].[UserTable]    Script Date: 8/5/2020 2:52:55 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[UserTable](
+	[UserID] [varchar](50) NOT NULL,
+	[FirstName] [varchar](50) NULL,
+	[LastName] [varchar](50) NULL,
+	[Email] [varchar](50) NULL,
+	[Password] [varchar](50) NULL,
+ CONSTRAINT [PK_UserTable] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [AutoTimeTable]
+GO
+
+/*************** GENERATED TIMETABLE ***********/
+/****** Object:  Table [dbo].[TIMETABLE]    Script Date: 8/5/2020 2:54:48 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TIMETABLE](
+	[T_ID] [bigint] NOT NULL,
+	[LEC1] [nvarchar](max) NULL,
+	[LEC2] [nvarchar](max) NULL,
+	[LEC3] [nvarchar](max) NULL,
+	[LEC4] [nvarchar](max) NULL,
+	[TBREAK] [nvarchar](max) NULL,
+	[LEC5] [nvarchar](max) NULL,
+	[LEC6] [nvarchar](max) NULL,
+	[LEC7] [nvarchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
