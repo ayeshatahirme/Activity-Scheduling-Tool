@@ -48,7 +48,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(486, 290);
+            this.button3.Location = new System.Drawing.Point(471, 290);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(95, 31);
             this.button3.TabIndex = 19;
@@ -116,11 +116,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(190, 298);
+            this.label4.Location = new System.Drawing.Point(262, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(272, 18);
+            this.label4.Size = new System.Drawing.Size(178, 18);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Add the course subjects and teachers:";
+            this.label4.Text = "Add the course subjects:";
             // 
             // label6
             // 
