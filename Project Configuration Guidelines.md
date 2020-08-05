@@ -1,3 +1,13 @@
+# Software Installation
+### Visual Studio 2017 Community
+To install the code editor Visual Studio 2017 Community [Click Here!](https://visualstudio.microsoft.com/vs/older-downloads/)
+
+### Microsoft .Net Framework
+To install Microsoft .Net Framework [Click Here!](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+
+### Microsoft SQL Server 2014 Management Studio
+To install database management system, Microsoft SQL Server 2014 Management Studio [Click Here!](https://www.microsoft.com/en-us/download/details.aspx?id=42299)
+
 # Project Configuration Guidelines (Step by Step):
 
 ### Step 1. Clone the repo
